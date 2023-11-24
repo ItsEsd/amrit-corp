@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AMRIT | Advance Media Representational Information Technologies</title>
+  <link rel="icon" type="image/x-icon" href="/favicon-ex.png" />
+  <link href="/css/vendor/bootstrap.4.5.2.min.css" rel="stylesheet">
+  <link href="/css/amrit-style.css" rel="stylesheet">
+  <link href="/css/amrit-style-media-screen.css" rel="stylesheet">
+</head>
+<body>
+
+<section>
+  <div class="video-background">
+    <video class="embed-responsive-item" autoplay loop muted>
+      <source src="/corp-drive/vsource/backgroundvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section>
+  <div class="acorp-info"><center>
+    <div class="reshold">
+      <div class="main">
+        <div class="main-title">
+          <div class="ttlam">A</div>
+          <div class="ttlam">M</div>
+          <div class="ttlam">R</div>
+          <div class="ttlam">I</div>
+          <div class="ttlam">T</div>
+        </div>
+        <div class="secondary-title">Advance Media Representational Information Technologies</div>
+      </div>
+   
+      <div class="startlinks">
+        <div class="row">
+          <div class="col-md-6">
+            <p><a target="_self" href="https://mwfbiz.com">🌐mwfbiz.COM | Mind Without Fear - MWF</a></p>
+          </div>
+          <div class="col-md-6">
+            <p><a target="_self" href="https://mastrowall.com">M A S T R O W A L L || An Art of Learning</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center></div>
+</section>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-left">
+    <div class="footer-links">
+      <a href="#privacy">Privacy</a> | 
+      <a href="#terms">Terms</a> | 
+      <a href="#operation">Operational units</a>
+    </div>
+  </div>
+  <div class="footer-left">
+    &copy; 2023 AMRIT Corp. All rights reserved.
+  </div>
+  <button class="footer-button" onclick="openNav()">Open Navigation</button>
+</div>
+
+<!-- Navigation Overlay -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#about">Corp. BRIEFING</a>
+    <a href="#operation">Operational units</a>
+    <a href="#investor">Investor Relations</a>
+    <a href="#updates">Updates</a>
+  </div>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+</script>
+
+<script src="/js/vendor/jquery-3.6.4.min.js"></script>
+<script src="/js/vendor/popper-2.10.2.js"></script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script>
+   $(document).ready(function() {
+      var notification = $('<div id="notification">Page Under Development</div>');
+      $('body').append(notification);
+      notification.slideDown();
+      setTimeout(function() {
+        notification.slideUp();
+      }, 20000);
+
+      $('a').on('click', function(event) {
+        event.preventDefault();
+        notification.slideDown();
+        setTimeout(function() {
+          notification.slideUp();
+        }, 3000);
+      });
+
+    });
+</script>
+</body>
+</html>
