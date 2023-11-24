@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>JavaScript Based Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Your Brand</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Operational units">Operational units</a></li>
+      <li class="nav-item"><a class="nav-link" href="#investor">Investor</a></li>
+      <li class="nav-item"><a class="nav-link" href="#privacy">Privacy</a></li>
+      <li class="nav-item"><a class="nav-link" href="#terms">Terms</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Video Background Section -->
+<section id="video-background">
+  <div class="embed-responsive embed-responsive-16by9">
+    <video class="embed-responsive-item" autoplay loop muted>
+      <!-- You can replace 'your-video.mp4' with the path to your video file -->
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white">About Us</h2>
+    <!-- Add your About Us content here -->
+  </div>
+</section>
+
+<!-- Operational units Section -->
+<section id="Operational units" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white">Operational units</h2>
+    <!-- Add your Operational units content here -->
+  </div>
+</section>
+
+<!-- Investor Section -->
+<section id="investor" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white">Investor</h2>
+    <!-- Add your Investor content here -->
+  </div>
+</section>
+
+<!-- Privacy Section -->
+<section id="privacy" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white">Privacy</h2>
+    <!-- Add your Privacy content here -->
+  </div>
+</section>
+
+<!-- Terms Section -->
+<section id="terms" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white">Terms</h2>
+    <!-- Add your Terms content here -->
+  </div>
+</section>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+ 
+
+@media screen and (max-width: 600px) {
+    .acorp-info .main-title {
+        margin-top:20%;
+        font-size: 3rem; 
+    }
+
+    .main-title .ttlam {
+        width: 60px; 
+    }
+
+    .acorp-info .secondary-title {
+        font-size: 10px;
+        padding: 5px; 
+    }
+    .startlinks p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .acorp-info .main-title {
+        margin-top:15%;
+        font-size: 4rem; 
+    }
+
+    .main-title .ttlam {
+        width: 100px; 
+    }
+
+    .acorp-info .secondary-title {
+        font-size: 16px; 
+    }
+}
