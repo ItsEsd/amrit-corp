@@ -1,11 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     width:100%;
+    height:100%;
     overflow-x: hidden;
     margin:0px;
 }
 html{
-overscroll-behavior: hidden;
+    width:100%;
+    height:100%;
+    overscroll-behavior: hidden;
   }
 header {
     text-align: center;
@@ -22,7 +25,7 @@ section {
 
 .contnt {
     line-height: 1.6;
-    width:100%;
+    width:80%;
     max-width: 800px;
     text-align: left;
     padding:20px;
@@ -40,12 +43,14 @@ footer {
     padding: 10px;
     background-color: #efefef;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     left:0px;
     width: 100%;
     color: #595959 !important;
     font-size: 14px !important;
+    word-break: break-word !important;
 }
+
 .video-background{
     top:0px;
     left:0px;
@@ -55,6 +60,7 @@ footer {
     height:100vh;
     overflow: hidden;
  }
+ embed-responsive{position:relative;display:block;width:100%;padding:0;overflow:hidden}.embed-responsive::before{display:block;content:""}.embed-responsive .embed-responsive-item,.embed-responsive embed,.embed-responsive iframe,.embed-responsive object,.embed-responsive video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}.embed-responsive-21by9::before{padding-top:42.857143%}.embed-responsive-16by9::before{padding-top:56.25%}.embed-responsive-4by3::before{padding-top:75%}.embed-responsive-1by1::before{padding-top:100%}
  .iconsvgtt{
     float:right;
     width:40px;
@@ -95,3 +101,25 @@ footer {
     .cropsrtcn a:hover{
     opacity:0.8;
     }
+
+    
+@media screen and (max-width: 600px) {
+    
+    footer{
+        font-size: 12px !important;
+    }
+    .cropsrtcn{
+        display: block;
+    }
+    .crpbrcnt{
+       display: inline-block;
+       font-size: 14px;
+        }
+        .cropsrtcn img{
+            max-width:80px;
+            }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+ 
+}
