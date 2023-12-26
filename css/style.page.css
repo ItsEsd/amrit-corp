@@ -121,10 +121,12 @@
     }
     .crpbrcnt{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     }
     .cropsrtcn img{
-    max-width:80px;
+    max-width:85px;
+    height: auto;
+    margin-bottom:-3.5px;
     }
     .noconstyl{
         font-size:16px;
