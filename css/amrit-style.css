@@ -154,18 +154,3 @@
   font-size: 18px;
   padding:5px 50px;
   }
-
-  #notification {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffcc00; /* Yellow background color */
-  color: #333; /* Text color */
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  z-index: 1000; /* Set z-index to a high value to make sure it's on top */
-  }
-

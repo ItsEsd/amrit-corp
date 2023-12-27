@@ -1,337 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Operational Units | AMRIT Corp.</title>
-<link rel="icon" type="image/x-icon" href="/favicon-nw.png" />
-<link href="/css/style.page.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-</head>
-<style>
-   .collapsible {
-      background-color: #f1f1f1;
-      cursor: pointer;
-      padding: 18px;
-      width: 85%;
-      text-align: left;
-      border: none;
-      outline: none;
-      font-size: 15px;
-      margin-top: 20px;
-      border-radius: 5px;
-    }
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Operational Units | AMRIT Corp.</title>
+  <link rel="icon" type="image/x-icon" href="/favicon-nw.png" />
+  <link href="/css/style.page.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  </head>
+  <style>
+  .collapsible {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 18px;
+  width: 85%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  }
 
-    .content {
-      display: none;
-      overflow: hidden;
-      background-color: #f9f9f9;
-      text-align: left;
-      padding:10px;
-      font-size: 18px;
-      width:85%;
-    }
-    .arrow {
-      display: inline-block;
-      float: right;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+  .content {
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  text-align: left;
+  padding:10px;
+  font-size: 18px;
+  width:85%;
+  }
+  .arrow {
+  display: inline-block;
+  float: right;
+  }
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  }
 
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+  th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  }
 
-    th {
-      background-color: #f2f2f2;
-    }
-td .btn{
-width:100%;
-font-size: 16px;
-text-align: right;
-padding:4px;
-color:#585858;
-border:1px solid #c7c7c7;
-}
-td pre{
+  th {
+  background-color: #f2f2f2;
+  }
+  td .btn{
+  width:100%;
+  font-size: 16px;
+  text-align: right;
+  padding:4px;
+  color:#585858;
+  border:1px solid #c7c7c7;
+  }
+  td pre{
   margin:0px;
-}
-td .btn svg{
+  }
+  td .btn svg{
   width:20px;
   height:20px;
   float:left;
-}
-     /* Modal styles */
-     .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
+  }
+  /* Modal styles */
+  .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  }
 
-    .modal-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      padding-top:1px;
-      border-radius: 5px;
-      height:70vh;
-      overflow-y:scroll;
-      overflow-x: hidden;
-      word-wrap: break-word !important;
-      text-align: left;
-    }
+  .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  padding-top:1px;
+  border-radius: 5px;
+  height:70vh;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  word-wrap: break-word !important;
+  text-align: left;
+  }
 
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
+  .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  }
 
 
-    .imelementop{
-      width: 30px;
-      height:auto;
-      float:right;
-      margin-right:10px;
-      margin-top:-4px;
-    }
-    a{
-      text-decoration: none;
-    }
-.prmttcon img{
+  .imelementop{
+  width: 30px;
+  height:auto;
+  float:right;
+  margin-right:10px;
+  margin-top:-4px;
+  }
+  a{
+  text-decoration: none;
+  }
+  .prmttcon img{
   margin-top:20px;
   width:150px;
   opacity: 0.7;
-}
-</style>
-<body>
-<section>
-<div class="video-background">
-    <video class="embed-responsive-item" autoplay loop muted>
-    <source src="/corp-drive/vsource/unitsdescrp.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-</div>
-</section>
-<center>
-<section>
-<header>
-<h1>Operational Units</h1>
-</header>
-<div class="contnt">
-<span class="iconsvgtt"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-database-fill-gear" viewBox="0 0 16 16">
-    <path d="M8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1"/>
-    <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7m6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002m-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905m3.631-4.538c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+  }
+  </style>
+  <body>
+  <section>
+  <div class="video-background">
+  <video class="embed-responsive-item" autoplay loop muted>
+  <source src="/corp-drive/vsource/unitsdescrp.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  </div>
+  </section>
+  <center>
+  <section>
+  <header>
+  <h1>Operational Units</h1>
+  </header>
+  <div class="contnt">
+  <span class="iconsvgtt"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-database-fill-gear" viewBox="0 0 16 16">
+  <path d="M8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1"/>
+  <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7m6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002m-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905m3.631-4.538c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
   </svg></span>       
 
-<center>
+  <center>
   <div class="prmttcon"><img src="https://media.tenor.com/vEOe8lFMk1kAAAAj/cursed-discord-flushed-emoji.gif"></div>
   <div class="collapsible" onclick="toggleCollapsible(1)">
-    🌐 mwfbiz.COM | Mind Without Fear - MWF 
-    <span class="arrow" id="arrow1">▼</span><img src="https://mwfbiz.com/image/logoSVG.svg" class="imelementop">
+  🌐 mwfbiz.COM | Mind Without Fear - MWF 
+  <span class="arrow" id="arrow1">▼</span><img src="https://mwfbiz.com/image/logoSVG.svg" class="imelementop">
   </div>
   <div class="content" id="content1">
-   
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Link/Info</th>
-        <th>Details</th>
-      </tr>
-      <tr>
-        <td>HOME</td>
-        <td><a href="https://mwfbiz.com">https://mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('HOME')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>FeedGist</td>
-        <td><a href="https://feed.mwfbiz.com">https://feed.mwfbiz.com</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
-        <td><button class="btn" onclick="showModal('FeedGist')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>QuBit</td>
-        <td><a href="https://qubit.mwfbiz.com">https://qubit.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('QuBit')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>MONOLOGUE</td>
-        <td><a href="https://imi.mwfbiz.com">https://imi.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('MONOLOGUE')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>Genesis</td>
-        <td><a href="https://genesis.mwfbiz.com">https://genesis.mwfbiz.com</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
-        <td><button class="btn" onclick="showModal('MONOLOGUE')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>C-resource</td>
-        <td><a href="https://c-resource.mwfbiz.com">https://c-resource.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('Cresource')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
 
-      <!-- Add similar rows for other links -->
-    </table>
- 
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Link/Info</th>
+    <th>Details</th>
+  </tr>
+  <tr>
+    <td>HOME</td>
+    <td><a href="https://mwfbiz.com">https://mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('HOME')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>FeedGist</td>
+    <td><a href="https://feed.mwfbiz.com">https://feed.mwfbiz.com</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
+    <td><button class="btn" onclick="showModal('FeedGist')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>QuBit</td>
+    <td><a href="https://qubit.mwfbiz.com">https://qubit.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('QuBit')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>MONOLOGUE</td>
+    <td><a href="https://imi.mwfbiz.com">https://imi.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('MONOLOGUE')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>Genesis</td>
+    <td><a href="https://genesis.mwfbiz.com">https://genesis.mwfbiz.com</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
+    <td><button class="btn" onclick="showModal('MONOLOGUE')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>C-resource</td>
+    <td><a href="https://c-resource.mwfbiz.com">https://c-resource.mwfbiz.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('Cresource')">Inspect<svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+
+  <!-- Add similar rows for other links -->
+  </table>
+
 
 
 
   </div>
-     
-    <!-- Modal -->
-    <div class="modal" id="contentModal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modalContent">
-          <!-- Content will be displayed here -->
-        </div>
-      </div>
+
+  <!-- Modal -->
+  <div class="modal" id="contentModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalContent">
+      <!-- Content will be displayed here -->
     </div>
+  </div>
+  </div>
   <div class="collapsible" onclick="toggleCollapsible(2)">
-    <b>M A S T R O W A L L </b>|| An Art of Learning 
-    <span class="arrow" id="arrow2">▼</span><img src="https://mastrowall.com/images/logoCircleBW.png" class="imelementop">
+  <b>M A S T R O W A L L </b>|| An Art of Learning 
+  <span class="arrow" id="arrow2">▼</span><img src="https://mastrowall.com/images/logoCircleBW.png" class="imelementop">
   </div>
   <div class="content" id="content2">
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Link/Info</th>
-        <th>Details</th>
-      </tr>
-      
-      <tr>
-        <td>Services</td>
-        <td><a href="https://mastrowall.com">https://mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('mwallsrvc')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>Exam-portal</td>
-        <td><a href="https://exam-portal.mastrowall.com">https://exam-portal.mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('mwallsrvc')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>Mastro | HOME</td>
-        <td><a href="https://mastrowall.in">https://mastrowall.in</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
-        <td><button class="btn" onclick="showModal('mhome')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-      <tr>
-        <td>Admin</td>
-        <td><a href="https://admin.mastrowall.com">https://admin.mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
-        <td><button class="btn" onclick="showModal('mhome')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
-          <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
-        </svg></button></td>
-      </tr>
-</table>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Link/Info</th>
+    <th>Details</th>
+  </tr>
+
+  <tr>
+    <td>Services</td>
+    <td><a href="https://mastrowall.com">https://mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('mwallsrvc')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>Exam-portal</td>
+    <td><a href="https://exam-portal.mastrowall.com">https://exam-portal.mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('mwallsrvc')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>Mastro | HOME</td>
+    <td><a href="https://mastrowall.in">https://mastrowall.in</a><br><pre>Host [ ghs.googlehosted.com. ]</pre></td>
+    <td><button class="btn" onclick="showModal('mhome')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  <tr>
+    <td>Admin</td>
+    <td><a href="https://admin.mastrowall.com">https://admin.mastrowall.com</a><br><pre>Host [ itsesd.github.io. ]</pre></td>
+    <td><button class="btn" onclick="showModal('mhome')">Inspect <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
+      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"/>
+    </svg></button></td>
+  </tr>
+  </table>
 
   </div>
-  
+
   <hr style="width:85%;">
-</center> 
+  </center> 
 
-</div>
-<div class="cropsrtcn">
-<div class="crpbrcnt"><a href="/"><img src="/corp-drive/imgsource/titlelogo.png"></a></div> | 
-<div class="crpbrcnt"><a target="_blank" href="/privacy-policy">Privacy</a></div> | 
-<div class="crpbrcnt"><a target="_blank" href="/terms-of-service">Terms</a></div> | 
-<div class="crpbrcnt"><a target="_blank" href="/units/">Operational units</a></div> | 
-<div class="crpbrcnt"><a target="_blank" href="/nav/investor">Investor relations</a></div>
-</div>
-</section>
-</center>
+  </div>
+  <div class="cropsrtcn">
+  <div class="crpbrcnt"><a href="/"><img src="/corp-drive/imgsource/titlelogo.png"></a></div> | 
+  <div class="crpbrcnt"><a target="_blank" href="/privacy-policy">Privacy</a></div> | 
+  <div class="crpbrcnt"><a target="_blank" href="/terms-of-service">Terms</a></div> | 
+  <div class="crpbrcnt"><a target="_blank" href="/units/">Operational units</a></div> | 
+  <div class="crpbrcnt"><a target="_blank" href="/nav/investor">Investor relations</a></div>
+  </div>
+  </section>
+  </center>
 
+  <footer>
+  &copy; 2023 Advance Media Representational Information Technologies. AMRIT Corp. All Rights Reserved.
+  </footer>     
 
-<footer>
-&copy; 2023 Advance Media Representational Information Technologies. AMRIT Corp. All Rights Reserved.
-</footer>     
-
-
-
-
-<script>
+  <script>
   function toggleCollapsible(section) {
-    var content = document.getElementById('content' + section);
-    var arrow = document.getElementById('arrow' + section);
+  var content = document.getElementById('content' + section);
+  var arrow = document.getElementById('arrow' + section);
 
-    if (content.style.display === 'block') {
-      content.style.display = 'none';
-      arrow.innerHTML = '▼';
-    } else {
-      content.style.display = 'block';
-      arrow.innerHTML = '▲';
-    }
+  if (content.style.display === 'block') {
+  content.style.display = 'none';
+  arrow.innerHTML = '▼';
+  } else {
+  content.style.display = 'block';
+  arrow.innerHTML = '▲';
+  }
   }
   var reginone = `
-    <div><div class="row" style=""><div class="col-md-12 queryResponseHeader " style="min-height: 1px; padding-top: 8px; padding-bottom: 8px; float: left; width: 778.656px;"><span style="font-weight: bolder; font-family: &quot;Courier New&quot;; font-size: x-large;">Registrar Information</span><br></div></div><div class="row " style=""><div class="col-md-12 queryResponseBody" style="min-height: 1px; float: left; width: 778.656px;"><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>GoDaddy.com, LLC</b></font></div></div><div class="row queryResponseBodyRow " style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Whois Server</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>whois.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Referral URL</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>https://www.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Status</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited<br>clientRenewProhibited https://icann.org/epp#clientRenewProhibited<br>clientTransferProhibited https://icann.org/epp#clientTransferProhibited<br>clientUpdateProhibited https://icann.org/epp#clientUpdateProhibite</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div></div></div></div></div><div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Registrant Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Administrative Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Technical Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div style=""><font size="2" face="Courier New"><b>Information Updated: 2023-12-27 21:14:06</b></font></div></div>
-    `;
-    var regintwo=`
-    <div><font size="2" face="Courier New">Domain Name: mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Domain ID: 2584449933_DOMAIN_COM-VRSN</font></div><div><font size="2" face="Courier New">Registrar WHOIS Server: whois.godaddy.com</font></div><div><font size="2" face="Courier New">Registrar URL: https://www.godaddy.com</font></div><div><font size="2" face="Courier New">Updated Date: 2023-01-03T07:00:23Z</font></div><div><font size="2" face="Courier New">Creation Date: 2021-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar Registration Expiration Date: 2024-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar: GoDaddy.com, LLC</font></div><div><font size="2" face="Courier New">Registrar IANA ID: 146</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Email: email@godaddy.com</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Phone: +1.4806242505</font></div><div><font size="2" face="Courier New">Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited</font></div><div><font size="2" face="Courier New">Registry Registrant ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Registrant Name: Registration Private</font></div><div><font size="2" face="Courier New">Registrant Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Registrant Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Registrant Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Registrant City: Tempe</font></div><div><font size="2" face="Courier New">Registrant State/Province: Arizona</font></div><div><font size="2" face="Courier New">Registrant Postal Code: 85284</font></div><div><font size="2" face="Courier New">Registrant Country: US</font></div><div><font size="2" face="Courier New">Registrant Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Registrant Phone Ext:</font></div><div><font size="2" face="Courier New">Registrant Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Registrant Fax Ext:</font></div><div><font size="2" face="Courier New">Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Admin ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Admin Name: Registration Private</font></div><div><font size="2" face="Courier New">Admin Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Admin Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Admin Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Admin City: Tempe</font></div><div><font size="2" face="Courier New">Admin State/Province: Arizona</font></div><div><font size="2" face="Courier New">Admin Postal Code: 85284</font></div><div><font size="2" face="Courier New">Admin Country: US</font></div><div><font size="2" face="Courier New">Admin Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Admin Phone Ext:</font></div><div><font size="2" face="Courier New">Admin Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Admin Fax Ext:</font></div><div><font size="2" face="Courier New">Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Tech ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Tech Name: Registration Private</font></div><div><font size="2" face="Courier New">Tech Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Tech Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Tech Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Tech City: Tempe</font></div><div><font size="2" face="Courier New">Tech State/Province: Arizona</font></div><div><font size="2" face="Courier New">Tech Postal Code: 85284</font></div><div><font size="2" face="Courier New">Tech Country: US</font></div><div><font size="2" face="Courier New">Tech Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Tech Phone Ext:</font></div><div><font size="2" face="Courier New">Tech Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Tech Fax Ext:</font></div><div><font size="2" face="Courier New">Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Name Server: NS11.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">Name Server: NS12.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">DNSSEC: unsigned</font></div><div><font size="2" face="Courier New">URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/</font></div><div><font size="2" face="Courier New">&gt;&gt;&gt; Last update of WHOIS database: 2023-12-27T22:47:27Z &lt;&lt;&lt;</font></div><div><font size="2" face="Courier New">For more information on Whois status codes, please visit https://icann.org/epp</font></div>
-    `
-   // Example array object with content for each link
+  <div><div class="row" style=""><div class="col-md-12 queryResponseHeader " style="min-height: 1px; padding-top: 8px; padding-bottom: 8px; float: left; width: 778.656px;"><span style="font-weight: bolder; font-family: &quot;Courier New&quot;; font-size: x-large;">Registrar Information</span><br></div></div><div class="row " style=""><div class="col-md-12 queryResponseBody" style="min-height: 1px; float: left; width: 778.656px;"><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>GoDaddy.com, LLC</b></font></div></div><div class="row queryResponseBodyRow " style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Whois Server</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>whois.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Referral URL</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>https://www.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Status</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited<br>clientRenewProhibited https://icann.org/epp#clientRenewProhibited<br>clientTransferProhibited https://icann.org/epp#clientTransferProhibited<br>clientUpdateProhibited https://icann.org/epp#clientUpdateProhibite</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div></div></div></div></div><div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Registrant Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Administrative Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Technical Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div style=""><font size="2" face="Courier New"><b>Information Updated: 2023-12-27 21:14:06</b></font></div></div>
+  `;
+  var regintwo=`
+  <div><font size="2" face="Courier New">Domain Name: mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Domain ID: 2584449933_DOMAIN_COM-VRSN</font></div><div><font size="2" face="Courier New">Registrar WHOIS Server: whois.godaddy.com</font></div><div><font size="2" face="Courier New">Registrar URL: https://www.godaddy.com</font></div><div><font size="2" face="Courier New">Updated Date: 2023-01-03T07:00:23Z</font></div><div><font size="2" face="Courier New">Creation Date: 2021-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar Registration Expiration Date: 2024-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar: GoDaddy.com, LLC</font></div><div><font size="2" face="Courier New">Registrar IANA ID: 146</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Email: email@godaddy.com</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Phone: +1.4806242505</font></div><div><font size="2" face="Courier New">Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited</font></div><div><font size="2" face="Courier New">Registry Registrant ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Registrant Name: Registration Private</font></div><div><font size="2" face="Courier New">Registrant Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Registrant Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Registrant Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Registrant City: Tempe</font></div><div><font size="2" face="Courier New">Registrant State/Province: Arizona</font></div><div><font size="2" face="Courier New">Registrant Postal Code: 85284</font></div><div><font size="2" face="Courier New">Registrant Country: US</font></div><div><font size="2" face="Courier New">Registrant Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Registrant Phone Ext:</font></div><div><font size="2" face="Courier New">Registrant Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Registrant Fax Ext:</font></div><div><font size="2" face="Courier New">Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Admin ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Admin Name: Registration Private</font></div><div><font size="2" face="Courier New">Admin Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Admin Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Admin Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Admin City: Tempe</font></div><div><font size="2" face="Courier New">Admin State/Province: Arizona</font></div><div><font size="2" face="Courier New">Admin Postal Code: 85284</font></div><div><font size="2" face="Courier New">Admin Country: US</font></div><div><font size="2" face="Courier New">Admin Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Admin Phone Ext:</font></div><div><font size="2" face="Courier New">Admin Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Admin Fax Ext:</font></div><div><font size="2" face="Courier New">Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Tech ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Tech Name: Registration Private</font></div><div><font size="2" face="Courier New">Tech Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Tech Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Tech Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Tech City: Tempe</font></div><div><font size="2" face="Courier New">Tech State/Province: Arizona</font></div><div><font size="2" face="Courier New">Tech Postal Code: 85284</font></div><div><font size="2" face="Courier New">Tech Country: US</font></div><div><font size="2" face="Courier New">Tech Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Tech Phone Ext:</font></div><div><font size="2" face="Courier New">Tech Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Tech Fax Ext:</font></div><div><font size="2" face="Courier New">Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Name Server: NS11.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">Name Server: NS12.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">DNSSEC: unsigned</font></div><div><font size="2" face="Courier New">URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/</font></div><div><font size="2" face="Courier New">&gt;&gt;&gt; Last update of WHOIS database: 2023-12-27T22:47:27Z &lt;&lt;&lt;</font></div><div><font size="2" face="Courier New">For more information on Whois status codes, please visit https://icann.org/epp</font></div>
+  `
+  // Example array object with content for each link
   const contentArray = {
-    
-     HOME: reginone,
-     FeedGist: reginone, 
-     QuBit: reginone,
-     MONOLOGUE: reginone, 
-     Genesis: reginone,
-     Cresource: reginone,
-     mhome:regintwo,
-     mwallsrvc:regintwo
-    // Add similar entries for other links
+
+  HOME: reginone,
+  FeedGist: reginone, 
+  QuBit: reginone,
+  MONOLOGUE: reginone, 
+  Genesis: reginone,
+  Cresource: reginone,
+  mhome:regintwo,
+  mwallsrvc:regintwo
+  // Add similar entries for other links
   };
 
   function showModal(linkName) {
-    const modalContentElement = document.getElementById('modalContent');
-    modalContentElement.innerHTML = contentArray[linkName];
+  const modalContentElement = document.getElementById('modalContent');
+  modalContentElement.innerHTML = contentArray[linkName];
 
-    const modalElement = document.getElementById('contentModal');
-    modalElement.style.display = 'block';
+  const modalElement = document.getElementById('contentModal');
+  modalElement.style.display = 'block';
   }
 
   function closeModal() {
-    const modalElement = document.getElementById('contentModal');
-    modalElement.style.display = 'none';
+  const modalElement = document.getElementById('contentModal');
+  modalElement.style.display = 'none';
   }
 
   // Close modal if clicked outside the modal content
   window.onclick = function(event) {
-    const modalElement = document.getElementById('contentModal');
-    if (event.target === modalElement) {
-      modalElement.style.display = 'none';
-    }
+  const modalElement = document.getElementById('contentModal');
+  if (event.target === modalElement) {
+  modalElement.style.display = 'none';
+  }
   };
 
-</script>
+  </script>
 
-</body>
-</html>
+  </body>
+  </html>
