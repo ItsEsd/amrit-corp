@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base64 Converter</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        padding: 20px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        min-height: 200px;
+      }
+
+      button {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Base64 Converter (Encoder/Decoder)</h2>
+
+    <textarea
+      id="inputText"
+      placeholder="Enter text, HTML, or script..."
+    ></textarea>
+    <button class="btn btn-primary" onclick="convertToBase64()">
+      Convert to Base64
+    </button>
+    <button class="btn btn-secondary" onclick="convertFromBase64()">
+      Convert from Base64
+    </button>
+
+    <textarea
+      id="outputText"
+      placeholder="Base64 data URL..."
+      readonly
+    ></textarea>
+    <hr />
+
+    <h2>Remove White Spaces</h2>
+
+    <textarea
+      id="codeInput"
+      placeholder="Enter HTML or JavaScript code..."
+    ></textarea>
+    <button class="btn btn-info" onclick="removeWhiteSpaces()">
+      Remove White Spaces
+    </button>
+
+    <textarea
+      id="codeOutput"
+      placeholder="Code with removed white spaces..."
+      readonly
+    ></textarea>
+    <hr />
+
+    <h2>Emoji to HTML Code Section</h2>
+
+    <textarea id="emojiInput" placeholder="Enter emoji..."></textarea>
+    <button class="btn btn-info" onclick="convertEmojiToHtml()">
+      Convert Emoji to HTML Code
+    </button>
+    <textarea
+      id="htmlCodeOutput"
+      placeholder="HTML code for emoji..."
+      readonly
+    ></textarea>
+
+    <script>
+      function convertToBase64() {
+        const inputText = document.getElementById("inputText").value;
+        const contentType = "text/plain";
+        const encodedText = btoa(unescape(encodeURIComponent(inputText)));
+        const dataURL = `data:${contentType};base64,${encodedText}`;
+        document.getElementById("outputText").value = dataURL;
+      }
+      function convertFromBase64() {
+        const inputText = document.getElementById("inputText").value;
+        const base64Content = inputText.split(",")[1];
+        const decodedText = decodeURIComponent(escape(atob(base64Content)));
+        document.getElementById("outputText").value = decodedText;
+      }
+      function removeWhiteSpaces() {
+        const codeInput = document.getElementById("codeInput").value;
+        const codeOutput = codeInput.replace(/\s+/g, " ");
+        document.getElementById("codeOutput").value = codeOutput;
+      }
+      function convertEmojiToHtml() {
+        const emojiInput = document.getElementById("emojiInput").value;
+        const htmlCodeOutput = emojiInput
+          .split("")
+          .map((char) => `&#${char.charCodeAt(0)};`)
+          .join("");
+        document.getElementById("htmlCodeOutput").value = htmlCodeOutput;
+      }
+    </script>
+  </body>
+</html>
