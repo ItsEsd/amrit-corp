@@ -68,7 +68,7 @@
     ></textarea>
     <hr />
 
-    <h2>Emoji to HTML Code</h2>
+    <h2>&#169;&#65039; Emoji to HTML Code</h2>
 
     <textarea id="emojiInput" placeholder="Enter emoji..."></textarea>
     <button class="btn btn-info" onclick="convertEmojiToHtml()">
@@ -101,9 +101,8 @@
       }
       function convertEmojiToHtml() {
         const emojiInput = document.getElementById("emojiInput").value;
-        const htmlCodeOutput = emojiInput
-          .split("")
-          .map((char) => `&#${char.charCodeAt(0)};`)
+        const htmlCodeOutput = Array.from(emojiInput)
+          .map((char) => `&#${char.codePointAt(0)};`)
           .join("");
         document.getElementById("htmlCodeOutput").value = htmlCodeOutput;
       }
