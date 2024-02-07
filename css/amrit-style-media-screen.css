@@ -1,45 +1,42 @@
- 
-
 @media screen and (max-width: 600px) {
-    .acorp-info{
-        padding-top: 30%;
-    }
-    .acorp-info .main-title {
-        margin-top:10%;
-        font-size: 2.5rem; 
-    }
+  .acorp-info {
+    padding-top: 30%;
+  }
+  .acorp-info .main-title {
+    margin-top: 10%;
+    font-size: 2.5rem;
+  }
 
-    .main-title .ttlam {
-        width: 60px; 
-    }
+  .main-title .ttlam {
+    width: 60px;
+  }
 
-    .acorp-info .secondary-title {
-        font-size: 10px;
-        padding: 5px; 
-    }
-    .startlinks p{
-        font-size: 12px;
-    }
-    .footer{
-        font-size: 12px;
-    }
-    .footer-button{
-        width:120px;
-    }
+  .acorp-info .secondary-title {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .startlinks p {
+    font-size: 12px;
+  }
+  .footer {
+    font-size: 12px;
+  }
+  .footer-button {
+    width: 120px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  
-    .acorp-info .main-title {
-        margin-top:15%;
-        font-size: 4rem; 
-    }
+  .acorp-info .main-title {
+    margin-top: 15%;
+    font-size: 4rem;
+  }
 
-    .main-title .ttlam {
-        width: 100px; 
-    }
+  .main-title .ttlam {
+    width: 100px;
+  }
 
-    .acorp-info .secondary-title {
-        font-size: 16px; 
-    }
+  .acorp-info .secondary-title {
+    font-size: 16px;
+  }
 }
