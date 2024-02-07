@@ -42,6 +42,7 @@ section {
   box-shadow: 0px 0px 10px 2px #9d9d9da9;
 }
 footer {
+  margin-left: -10px;
   bottom: 0px;
   left: 0px;
   width: 100%;
@@ -167,6 +168,11 @@ embed-responsive {
   }
   .noconstyl {
     font-size: 16px;
+  }
+  .iconsvgtt {
+    width: 30px;
+    height: 30px;
+    margin-top: -40px;
   }
 }
 /* 
