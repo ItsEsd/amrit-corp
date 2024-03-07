@@ -600,5 +600,24 @@
         }
       };
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.backgroundColor = "#161616";
+        var videos = document.getElementsByClassName("embed-responsive-item");
+        for (var i = 0; i < videos.length; i++) {
+          videos[i].style.display = "none";
+        }
+        for (var i = 0; i < videos.length; i++) {
+          videos[i].addEventListener("canplaythrough", function () {
+            this.style.display = "block";
+          });
+        }
+        for (var i = 0; i < videos.length; i++) {
+          videos[i].addEventListener("error", function () {
+            this.parentElement.style.display = "none";
+          });
+        }
+      });
+    </script>
   </body>
 </html>
