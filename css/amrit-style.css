@@ -234,19 +234,22 @@ html {
   color: #1b1b1b;
   margin-top: -2px;
 }
-#newtabwind {
+#newtabwind,
+#closeBtnfrm {
   width: 25px !important;
   height: 25px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newtabwind {
   background-color: #00a2ff;
-  float: left;
 }
 
 #closeBtnfrm {
   background-color: #f93838;
-  width: 25px !important;
-  height: 25px !important;
   color: #1b1b1b;
-  float: left;
 }
 #loadfrmdv {
   color: #5c5c5ccc;
