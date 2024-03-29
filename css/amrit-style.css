@@ -212,6 +212,9 @@ html {
   font-weight: 600;
   color: #454545;
 }
+.amcontt a {
+  cursor: pointer;
+}
 #closeButton {
   border: 0px;
   width: 100%;
@@ -224,4 +227,42 @@ html {
   padding: 10px;
   background: #e2e2e2;
   border-radius: 10px;
+}
+#newtabwind svg {
+  width: 12px;
+  height: 12px;
+  color: #414141;
+  margin-top: -2px;
+}
+#newtabwind {
+  width: 25px;
+  background-color: #00a2ff;
+}
+
+#closeBtnfrm {
+  background-color: #f93838;
+  width: 25px;
+  color: #414141;
+}
+#loadfrmdv {
+  color: #5c5c5ccc;
+}
+#newtabwind:hover,
+#closeBtnfrm:hover {
+  background-color: #d1d1d1;
+  transition: 0.2s;
+}
+.spinloadfrm svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
