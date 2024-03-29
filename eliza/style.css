@@ -1,0 +1,100 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #383838;
+  background-image: url();
+}
+html {
+  overscroll-behavior: hidden;
+}
+.neurotoy {
+  width: 100%;
+  height: 100vh;
+}
+.neurotoy textarea {
+  width: 100%;
+  max-width: 700px;
+  height: 60vh;
+  padding: 10px;
+  background-color: #f1f1f1;
+  color: black;
+  resize: none;
+}
+.neurotoy input {
+  max-width: 700px;
+  width: 100%;
+  height: 5vh;
+  padding-left: 5px;
+  outline: none;
+  border: 0px;
+  background-color: #e5e5e5;
+}
+#infoelz {
+  display: none;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 77vh;
+  position: fixed;
+  background-color: #383838;
+  color: #ffffff71;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: auto;
+}
+#infoelz .mncn {
+  font-size: 14px;
+  padding: 10px;
+}
+#infoelz button {
+  margin-top: 40px;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  color: #949494;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#inbrf {
+  float: right;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  color: grey;
+  cursor: pointer;
+}
+#elztit {
+  padding-top: 3vh;
+  color: #767676;
+  max-width: 700px;
+}
+#elztit .title {
+  font-size: 66px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 10px;
+}
+#elztit .descp {
+  background-color: #4f4f4f;
+  color: #949494;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #bebebe;
+}
+#comhead {
+  margin-top: 20px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #949494;
+}
+#comhead span {
+  margin-bottom: 20px;
+  line-height: normal;
+}
