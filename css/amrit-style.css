@@ -241,6 +241,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Ensure no overflow */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 #newtabwind {
@@ -251,6 +253,7 @@ html {
   background-color: #f93838;
   color: #1b1b1b;
 }
+
 #loadfrmdv {
   color: #5c5c5ccc;
 }
