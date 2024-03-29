@@ -235,12 +235,16 @@ html {
   margin-top: -2px;
 }
 #newtabwind {
+  width: 25px !important;
+  height: 25px !important;
   background-color: #00a2ff;
   text-align: center;
 }
 
 #closeBtnfrm {
   background-color: #f93838;
+  width: 25px !important;
+  height: 25px !important;
   color: #1b1b1b;
   text-align: center;
 }
