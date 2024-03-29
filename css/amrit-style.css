@@ -231,7 +231,7 @@ html {
 #newtabwind svg {
   width: 12px;
   height: 12px;
-  color: #414141;
+  color: #1b1b1b;
   margin-top: -2px;
 }
 #newtabwind {
@@ -242,7 +242,7 @@ html {
 #closeBtnfrm {
   background-color: #f93838;
   width: 25px;
-  color: #414141;
+  color: #1b1b1b;
 }
 #loadfrmdv {
   color: #5c5c5ccc;
