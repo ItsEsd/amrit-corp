@@ -21,6 +21,7 @@ html {
   background-color: #f1f1f1;
   color: black;
   resize: none;
+  border-radius: 0px;
 }
 .neurotoy input {
   max-width: 700px;
@@ -30,13 +31,14 @@ html {
   outline: none;
   border: 0px;
   background-color: #e5e5e5;
+  border-radius: 0px;
 }
 #infoelz {
   display: none;
   bottom: 0px;
   right: 0px;
   width: 100%;
-  height: 77vh;
+  height: 60vh;
   position: fixed;
   background-color: #383838;
   color: #ffffff71;
@@ -48,7 +50,7 @@ html {
   padding: 10px;
 }
 #infoelz button {
-  margin-top: 40px;
+  margin-top: 20px;
   border: none;
   width: 100%;
   background-color: transparent;
