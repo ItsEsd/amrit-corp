@@ -238,7 +238,7 @@ html {
   width: 25px !important;
   height: 25px !important;
   background-color: #00a2ff;
-  text-align: center;
+  float: left;
 }
 
 #closeBtnfrm {
@@ -246,7 +246,7 @@ html {
   width: 25px !important;
   height: 25px !important;
   color: #1b1b1b;
-  text-align: center;
+  float: left;
 }
 #loadfrmdv {
   color: #5c5c5ccc;
