@@ -15,7 +15,7 @@ html {
   width: 100%;
   position: fixed;
   height: 100vh;
-  background-color: #0f0f0f6c;
+  background-color: #d2d4d800;
   z-index: 10;
   padding: 20px;
   padding-top: 10%;
@@ -26,13 +26,14 @@ html {
   height: 100vh;
   overflow: hidden;
   filter: blur(2px);
+  filter: grayscale(1);
 }
 
 .acorp-info .main-title {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 8rem;
   font-weight: 600;
-  color: #11d70ab5;
+  color: #b1b1b1;
   margin-bottom: 20px;
 }
 .main-title .ttlam {
@@ -41,7 +42,7 @@ html {
   display: inline-block;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px #add8005e;
+  box-shadow: 0px 0px 10px 5px #6868687d;
 }
 
 .acorp-info .secondary-title {
@@ -69,9 +70,9 @@ html {
 .startlinks p {
   font-family: "Courier New", Courier, monospace;
   width: 100%;
-  background-color: #001cbc51;
+  background-color: #48484851;
   padding: 10px;
-  border: 2px dashed #008000;
+  border: 2px dashed #6b6b6b;
   color: white;
   cursor: pointer;
   font-size: 16px;
@@ -107,7 +108,7 @@ html {
 }
 
 .footer-button {
-  background-color: #8f4c00ba;
+  background-color: #00a2ffe6;
   color: #ebebebd0;
   border: none;
   padding: 5px;
