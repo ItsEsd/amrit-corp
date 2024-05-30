@@ -216,10 +216,14 @@ html {
   padding-left: 2px;
 }
 .amcontt a {
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   cursor: pointer;
 }
 .amcontt a:hover {
+  padding: 0px 2px;
+  background-color: #c8c8c844;
+  border-radius: 4px;
+  transform: scale(1.03);
   border-bottom: 1px solid #0f0ccbac;
 }
 #closeButton {
