@@ -26,14 +26,22 @@ html {
   height: 100vh;
   overflow: hidden;
   filter: blur(2px);
-  /* filter: grayscale(1); */
+  animation: hueRotate 0.1s infinite linear;
+}
+@keyframes hueRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(270deg);
+  }
 }
 
 .acorp-info .main-title {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 8rem;
   font-weight: 600;
-  color: #c6c6c6;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 .main-title .ttlam {
@@ -41,14 +49,14 @@ html {
   background-color: #1f1f1f4b;
   display: inline-block;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px 5px #6868687d;
+  /* border-radius: 5px; */
+  box-shadow: 0px 0px 10px 5px #e9a20a7e;
 }
 
 .acorp-info .secondary-title {
   font-family: "Arial Black", Gadget, sans-serif;
   background-color: #0000007d;
-  border-radius: 5px;
+  border-radius: 2px;
   color: #e9a20a;
   font-size: 30px;
   padding: 10px;
@@ -70,7 +78,7 @@ html {
 .startlinks p {
   font-family: "Courier New", Courier, monospace;
   width: 100%;
-  background-color: #48484851;
+  background-color: #110ad051;
   padding: 10px;
   border: 2px dashed #6b6b6b;
   color: white;
@@ -108,12 +116,12 @@ html {
 }
 
 .footer-button {
-  background-color: #2aa511;
+  background-color: #6a6a6a66;
   color: #ebebeb;
   border: none;
   padding: 5px;
   cursor: pointer;
-  width: 180px;
+  width: 150px;
   border-radius: 5px;
   box-shadow: 2px 2px 0px 0px #686868d7;
   margin-right: 2px;
