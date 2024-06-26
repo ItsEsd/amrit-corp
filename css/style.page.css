@@ -123,6 +123,7 @@ embed-responsive {
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-weight: normal;
 }
 .crpbrcnt {
   margin-right: 10px;
@@ -149,7 +150,9 @@ embed-responsive {
   padding-bottom: 120px;
   color: #797979;
 }
-
+footer {
+  font-weight: normal;
+}
 @media screen and (max-width: 600px) {
   footer {
     font-size: 12px !important;
