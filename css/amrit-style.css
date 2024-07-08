@@ -69,6 +69,7 @@ html {
   text-align: center;
   background-image: url("/corp-drive/imgsource/backam.gif");
   background-size: 150% 150%;
+  filter: grayscale(0.6);
 }
 
 .acorp-info .secondary-title {
@@ -96,10 +97,9 @@ html {
 .startlinks p {
   font-family: "Courier New", Courier, monospace;
   width: 100%;
-  background-color: #00000081;
+  background-color: #fbfbfbf4;
   padding: 10px;
-  border: 2px dashed #d9990d;
-  color: white;
+  border: 2px dashed #e41414;
   cursor: pointer;
   font-size: 16px;
 }
@@ -108,7 +108,7 @@ html {
 }
 
 .startlinks a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 .footer {
@@ -134,7 +134,7 @@ html {
 }
 
 .footer-button {
-  background-color: #00a2ff7d;
+  background-color: #6666666c;
   color: #ebebeb;
   border: none;
   padding: 5px;
@@ -191,7 +191,7 @@ html {
   position: fixed;
   bottom: 75px;
   left: 25px;
-  background-color: #00a2ff;
+  background-color: #ffffff;
   color: #fff;
   padding: 7px;
   border: none;
@@ -200,7 +200,7 @@ html {
   z-index: 10;
   background-size: cover;
   background-position: center;
-  box-shadow: -5px -5px 0px 0px #0583d16d;
+  box-shadow: -5px -5px 0px 0px #0f0ccb83;
 }
 #ambtn:hover {
   opacity: 0.8;
