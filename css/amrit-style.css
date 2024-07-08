@@ -67,7 +67,7 @@ html {
   background-color: #1f1f1f4b;
   display: inline-block;
   text-align: center;
-  background-image: url("https://j.gifs.com/YE6OJA.gif");
+  background-image: url("/corp-drive/imgsource/backam.gif");
   background-size: 150% 150%;
 }
 
@@ -96,7 +96,7 @@ html {
 .startlinks p {
   font-family: "Courier New", Courier, monospace;
   width: 100%;
-  background-color: #0b29c142;
+  background-color: #00000081;
   padding: 10px;
   border: 2px dashed #d9990d;
   color: white;
