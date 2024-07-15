@@ -63,36 +63,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData();
     formData.append("image_file", file);
     formData.append("size", "auto");
-
-    fetch("https://api.remove.bg/v1.0/removebg", {
-      method: "POST",
-      headers: {
+    fetch("../config.json")
+      .then((response) => response.json())
+      .then((config) => {
+        const apiKey = config.removeBgApiKey;
         // https://sonnguyenhoang.com/ :: https://github.com/hoangsonww
         // API Reference: https://www.remove.bg/
-        "X-Api-Key": "Yu5LnHCRmLXRod3ZzU68zDQR",
-      },
-      body: formData,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        processedImageUrl = URL.createObjectURL(blob);
-        updateImagePreview(processedImageUrl, preview);
-        downloadBtn.disabled = false;
+        fetch("https://api.remove.bg/v1.0/removebg", {
+          method: "POST",
+          headers: {
+            "X-Api-Key": apiKey,
+          },
+          body: formData,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.blob();
+          })
+          .then((blob) => {
+            const processedImageUrl = URL.createObjectURL(blob);
+            updateImagePreview(processedImageUrl, preview);
+            downloadBtn.disabled = false;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            message.textContent =
+              "Error removing background. Your image might not have a clear subject. Please try again with a different image.";
+            message.style.display = "block";
+          })
+          .finally(() => {
+            removeBgBtn.disabled = false;
+            loader.style.display = "none";
+          });
       })
       .catch((error) => {
-        console.error("Error:", error);
-        message.textContent =
-          "Error removing background. Your image might not have a clear subject. Please try again with a different image.";
-        message.style.display = "block";
-      })
-      .finally(() => {
-        removeBgBtn.disabled = false;
-        loader.style.display = "none";
+        console.error("Error loading config:", error);
       });
   });
 
