@@ -21,7 +21,7 @@ html {
   height: 0px;
 }
 #navbar {
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: linear-gradient(90deg, #6eb4ff, #ff4d4d);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -63,6 +63,15 @@ html {
 #navbar div::-webkit-scrollbar {
   width: 0px;
   height: 0px;
+}
+
+#border-btn {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
 }
 #controls,
 #inputSection {

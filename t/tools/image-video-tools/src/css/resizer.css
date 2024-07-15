@@ -17,6 +17,7 @@
   text-align: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 0;
+  position: relative;
 }
 
 body.dark-mode #inputSection,

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let img = new Image();
   let isImageLoaded = false;
   let originalFileName;
+  let isBorderAdded = false;
 
   function toggleSizeInput(isDimensions) {
     if (!isImageLoaded) {
@@ -40,6 +41,41 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImageSizeDisplay();
   }
 
+  function drawImageWithBorder() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const widthInput = document.getElementById("width");
+    const heightInput = document.getElementById("height");
+    const maintainAspectRatio = document.getElementById("aspectRatio").checked;
+
+    let newWidth = parseInt(widthInput.value);
+    let newHeight = parseInt(heightInput.value);
+
+    if (maintainAspectRatio && originalWidth && originalHeight) {
+      if (document.activeElement === widthInput) {
+        newHeight = Math.round((originalHeight * newWidth) / originalWidth);
+        heightInput.value = newHeight;
+      } else if (document.activeElement === heightInput) {
+        newWidth = Math.round((originalWidth * newHeight) / originalHeight);
+        widthInput.value = newWidth;
+      }
+    }
+
+    canvas.width = newWidth + 4; // Adding 2px border on each side
+    canvas.height = newHeight + 4; // Adding 2px border on each side
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (isBorderAdded) {
+      ctx.strokeStyle = "grey";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(2, 2, newWidth, newHeight);
+    }
+
+    ctx.drawImage(img, 2, 2, newWidth, newHeight);
+    updateImageSizeDisplay();
+  }
+
   function updatePreview() {
     if (!isImageLoaded) {
       alert("Please upload an image first.");
@@ -71,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ctx.imageSmoothingQuality = "high";
     ctx.drawImage(img, 0, 0, newWidth, newHeight);
     updateImageSizeDisplay();
+    drawImageWithBorder();
   }
 
   document.getElementById("imageInput").addEventListener("change", function () {
@@ -109,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Please upload and resize an image first.");
       return;
     }
-
+    updatePreview();
     const canvas = document.getElementById("canvas");
     canvas.toBlob(
       function (blob) {
@@ -140,6 +177,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("width").addEventListener("input", updatePreview);
   document.getElementById("height").addEventListener("input", updatePreview);
+
+  document.getElementById("border-btn").addEventListener("click", function () {
+    if (!isImageLoaded) {
+      alert("Please upload an image first.");
+      return;
+    }
+
+    isBorderAdded = !isBorderAdded;
+    this.textContent = isBorderAdded ? "Remove Border" : "Add Border";
+    drawImageWithBorder();
+    updatePreview();
+  });
+
+  document
+    .querySelector("button[onclick='dwnldimg()']")
+    .addEventListener("click", downloadImage);
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
