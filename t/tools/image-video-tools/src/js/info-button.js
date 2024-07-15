@@ -16,7 +16,7 @@ function createInfoButton() {
         <div class="info-about-content">
            Welcome to the Image & Video Tools application! Created by Son Nguyen in 2024, its goal is to provide you with a comprehensive suite of tools for manipulating images and videos directly in your browser. Whether you need to resize an image, apply filters, convert file formats, generate thumbnails, or remove audio from a video, our tools make it easy to perform these tasks quickly and efficiently.
 
-            Each tool is designed with user-friendliness in mind, offering intuitive interfaces and seamless functionality. Please feel free to contact us <a target="_blank" href="mailto:contact@amrit-corp.com">contact@amrit-corp.com</a>. 
+            Each tool is designed with user-friendliness in mind, offering intuitive interfaces and seamless functionality. Please feel free to contact us <a target="_blank" href="mailto:contact@amrit-corp.com">contact@amrit-corp.com</a> | &copy; amrit-corp.com 2024. 
 
             <br><br>
             <strong>Special Thanks:</strong> This application utilizes code created by <a target="_blank" href="https://github.com/hoangsonww">Son Nguyen</a>. His contributions have been instrumental in making these tools effective and user-friendly.
