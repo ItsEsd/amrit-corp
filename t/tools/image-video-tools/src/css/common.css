@@ -16,6 +16,10 @@ html {
   height: 100vh;
   overscroll-behavior: none;
 }
+#container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
 #navbar {
   background: linear-gradient(90deg, #007bff, #0056b3);
   color: white;
