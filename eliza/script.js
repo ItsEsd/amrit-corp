@@ -613,6 +613,14 @@ function write() {
 }
 function refresh() {
   setTimeout("write()", 10000);
-} // Correct user overwrites
+}
 
+function openinfo() {
+  var elem = document.getElementById("infoelz");
+  if (elem.style.display === "none") {
+    elem.style.display = "block";
+  } else {
+    elem.style.display = "none";
+  }
+}
 // -->
