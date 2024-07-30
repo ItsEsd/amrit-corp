@@ -278,16 +278,18 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensure no overflow */
-  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  white-space: nowrap;
 }
-
+#closeBtnfrm img {
+  margin-top: -4px !important;
+}
 #newtabwind {
   background-color: #00a2ff;
 }
 
 #closeBtnfrm {
-  background-color: #f93838;
+  background-color: #ffffff;
   color: #1b1b1b;
 }
 
