@@ -127,6 +127,10 @@ footer {
 footer {
   font-weight: normal;
 }
+a:hover {
+  border-bottom: 1px solid #3030f1;
+  transition: 0.3s;
+}
 @media screen and (max-width: 600px) {
   footer {
     font-size: 12px !important;
