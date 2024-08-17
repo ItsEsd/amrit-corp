@@ -51,6 +51,7 @@
       margin-top: 20px;
       border-radius: 5px;
     }
+
     .content {
       display: none;
       overflow: hidden;
@@ -60,14 +61,17 @@
       font-size: 18px;
       width: 85%;
     }
+
     .arrow {
       display: inline-block;
       float: right;
     }
+
     table {
       border-collapse: collapse;
       width: 100%;
     }
+
     th,
     td {
       border: 1px solid #dddddd;
@@ -75,9 +79,11 @@
       padding: 8px;
       font-size: 14px;
     }
+
     th {
       background-color: #f2f2f2;
     }
+
     td .btn {
       width: 100%;
       font-size: 16px;
@@ -88,15 +94,19 @@
       font-size: 14px;
       font-family: "Courier New", Courier, monospace;
     }
+
     td pre {
       margin: 0px;
       overflow-x: auto;
     }
+
     td .btn svg {
       width: 20px;
       height: 20px;
       float: left;
-    } /* Modal styles */
+    }
+
+    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -107,6 +117,7 @@
       background-color: rgba(0, 0, 0, 0.7);
       margin: 0px;
     }
+
     .modal-content {
       position: absolute;
       top: 50%;
@@ -116,20 +127,22 @@
       padding: 20px;
       padding-top: 1px;
       border-radius: 5px;
-      height: 70vh;
+      height: 76vh;
       overflow-y: scroll;
       overflow-x: hidden;
       word-wrap: break-word !important;
       text-align: left;
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
     }
+
     .close {
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
     }
+
     .imelementop {
       width: 30px;
       height: auto;
@@ -137,14 +150,17 @@
       margin-right: 10px;
       margin-top: -4px;
     }
+
     a {
       text-decoration: none;
     }
+
     .prmttcon {
       display: block;
       width: 90%;
       text-align: left;
     }
+
     .prmttcon img {
       margin: 10px;
       margin-top: 20px;
@@ -153,27 +169,32 @@
       float: right;
       display: block;
     }
+
     @media screen and (max-width: 600px) {
       table,
       th,
       td {
         font-size: 12px !important;
       }
+
       .modal-content {
-        max-width: 350px;
+        max-width: 400px;
         word-wrap: break-word;
       }
+
       .prmttcon img {
         margin-top: 20px;
         width: 60px;
         opacity: 0.7;
       }
+
       .imelementop {
         width: 20px;
         margin-top: 3px;
       }
     }
   </style>
+
   <body>
     <section>
       <div class="video-background">
@@ -185,7 +206,9 @@
     </section>
     <center>
       <section>
-        <header><h1>Operational Units</h1></header>
+        <header>
+          <h1>Operational Units</h1>
+        </header>
         <div class="contnt">
           <span class="iconsvgtt"
             ><svg
@@ -389,16 +412,12 @@
                     </button>
                   </td>
                 </tr>
-                <!-- Add similar rows for other links -->
               </table>
             </div>
-            <!-- Modal -->
             <div class="modal" id="contentModal">
               <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <div id="modalContent">
-                  <!-- Content will be displayed here -->
-                </div>
+                <div id="modalContent"></div>
               </div>
             </div>
             <div class="collapsible" onclick="toggleCollapsible(2)">
@@ -555,7 +574,33 @@
         }
       }
       var reginone = ` <div><div class="row" style=""><div class="col-md-12 queryResponseHeader " style="min-height: 1px; padding-top: 8px; padding-bottom: 8px; float: left; width: 778.656px;"><span style="font-weight: bolder; font-family: &quot;Courier New&quot;; font-size: x-large;">Registrar Information</span><br></div></div><div class="row " style=""><div class="col-md-12 queryResponseBody" style="min-height: 1px; float: left; width: 778.656px;"><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>GoDaddy.com, LLC</b></font></div></div><div class="row queryResponseBodyRow " style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Whois Server</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>whois.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Referral URL</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>https://www.godaddy.com</b></font></div></div><div class="row queryResponseBodyRow" style="padding: 6px 0px;"><div class="col-md-4 queryResponseBodyKey" style="min-height: 1px; float: left; width: 259.552px;"><font size="2" face="Courier New"><b>Status</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><font size="2" face="Courier New"><b>clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited<br>clientRenewProhibited https://icann.org/epp#clientRenewProhibited<br>clientTransferProhibited https://icann.org/epp#clientTransferProhibited<br>clientUpdateProhibited https://icann.org/epp#clientUpdateProhibite</b></font></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div><div class="col-md-8 queryResponseBodyValue" style="min-height: 1px; float: left; width: 519.104px;"><br></div></div></div></div></div><div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Registrant Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Administrative Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div class="rawWhois" style="line-height: 1.42857;"><div><font size="2" face="Courier New"><b>Technical Contact Information:</b></font></div><div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Name</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Registration Private</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Organization</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Domains By Proxy, LLC</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>DomainsByProxy.com</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Address</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>2155 E Warner Rd</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>City</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Tempe</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>State / Province</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Arizona</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Postal Code</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>85284</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Country</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>US</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Phone</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>+1.4806242599</b></font></div></div><div class="row"><div class="col-md-offset-1 col-md-4" style="min-height: 1px; float: left; width: 259.552px; margin-left: 64.8854px;"><font size="2" face="Courier New"><b>Email</b></font></div><div class="col-md-7" style="min-height: 1px; float: left; width: 454.208px;"><font size="2" face="Courier New"><b>Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mwfbiz.com</b></font></div></div></div><font size="2" face="Courier New"><b><br></b></font></div><div style=""><font size="2" face="Courier New"><b>Information Updated: 2023-12-27 21:14:06</b></font></div></div> `;
-      var regintwo = ` <div><font size="2" face="Courier New">Domain Name: mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Domain ID: 2584449933_DOMAIN_COM-VRSN</font></div><div><font size="2" face="Courier New">Registrar WHOIS Server: whois.godaddy.com</font></div><div><font size="2" face="Courier New">Registrar URL: https://www.godaddy.com</font></div><div><font size="2" face="Courier New">Updated Date: 2023-01-03T07:00:23Z</font></div><div><font size="2" face="Courier New">Creation Date: 2021-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar Registration Expiration Date: 2024-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar: GoDaddy.com, LLC</font></div><div><font size="2" face="Courier New">Registrar IANA ID: 146</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Email: email@godaddy.com</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Phone: +1.4806242505</font></div><div><font size="2" face="Courier New">Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited</font></div><div><font size="2" face="Courier New">Registry Registrant ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Registrant Name: Registration Private</font></div><div><font size="2" face="Courier New">Registrant Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Registrant Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Registrant Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Registrant City: Tempe</font></div><div><font size="2" face="Courier New">Registrant State/Province: Arizona</font></div><div><font size="2" face="Courier New">Registrant Postal Code: 85284</font></div><div><font size="2" face="Courier New">Registrant Country: US</font></div><div><font size="2" face="Courier New">Registrant Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Registrant Phone Ext:</font></div><div><font size="2" face="Courier New">Registrant Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Registrant Fax Ext:</font></div><div><font size="2" face="Courier New">Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Admin ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Admin Name: Registration Private</font></div><div><font size="2" face="Courier New">Admin Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Admin Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Admin Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Admin City: Tempe</font></div><div><font size="2" face="Courier New">Admin State/Province: Arizona</font></div><div><font size="2" face="Courier New">Admin Postal Code: 85284</font></div><div><font size="2" face="Courier New">Admin Country: US</font></div><div><font size="2" face="Courier New">Admin Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Admin Phone Ext:</font></div><div><font size="2" face="Courier New">Admin Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Admin Fax Ext:</font></div><div><font size="2" face="Courier New">Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Tech ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Tech Name: Registration Private</font></div><div><font size="2" face="Courier New">Tech Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Tech Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Tech Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Tech City: Tempe</font></div><div><font size="2" face="Courier New">Tech State/Province: Arizona</font></div><div><font size="2" face="Courier New">Tech Postal Code: 85284</font></div><div><font size="2" face="Courier New">Tech Country: US</font></div><div><font size="2" face="Courier New">Tech Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Tech Phone Ext:</font></div><div><font size="2" face="Courier New">Tech Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Tech Fax Ext:</font></div><div><font size="2" face="Courier New">Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Name Server: NS11.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">Name Server: NS12.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">DNSSEC: unsigned</font></div><div><font size="2" face="Courier New">URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/</font></div><div><font size="2" face="Courier New">&gt;&gt;&gt; Last update of WHOIS database: 2023-12-27T22:47:27Z &lt;&lt;&lt;</font></div><div><font size="2" face="Courier New">For more information on Whois status codes, please visit https://icann.org/epp</font></div> `; // Example array object with content for each link const contentArray = { HOME: reginone, FeedGist: reginone, QuBit: reginone, MONOLOGUE: reginone, Genesis: reginone, Cresource: reginone, mhome: regintwo, mwallsrvc: regintwo, // Add similar entries for other links }; function showModal(linkName) { const modalContentElement = document.getElementById("modalContent"); modalContentElement.innerHTML = contentArray[linkName]; const modalElement = document.getElementById("contentModal"); modalElement.style.display = "block"; } function closeModal() { const modalElement = document.getElementById("contentModal"); modalElement.style.display = "none"; } // Close modal if clicked outside the modal content window.onclick = function (event) { const modalElement = document.getElementById("contentModal"); if (event.target === modalElement) { modalElement.style.display = "none"; } };
+      var regintwo = ` <div><font size="2" face="Courier New">Domain Name: mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Domain ID: 2584449933_DOMAIN_COM-VRSN</font></div><div><font size="2" face="Courier New">Registrar WHOIS Server: whois.godaddy.com</font></div><div><font size="2" face="Courier New">Registrar URL: https://www.godaddy.com</font></div><div><font size="2" face="Courier New">Updated Date: 2023-01-03T07:00:23Z</font></div><div><font size="2" face="Courier New">Creation Date: 2021-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar Registration Expiration Date: 2024-01-13T03:36:54Z</font></div><div><font size="2" face="Courier New">Registrar: GoDaddy.com, LLC</font></div><div><font size="2" face="Courier New">Registrar IANA ID: 146</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Email: email@godaddy.com</font></div><div><font size="2" face="Courier New">Registrar Abuse Contact Phone: +1.4806242505</font></div><div><font size="2" face="Courier New">Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited</font></div><div><font size="2" face="Courier New">Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited</font></div><div><font size="2" face="Courier New">Registry Registrant ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Registrant Name: Registration Private</font></div><div><font size="2" face="Courier New">Registrant Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Registrant Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Registrant Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Registrant City: Tempe</font></div><div><font size="2" face="Courier New">Registrant State/Province: Arizona</font></div><div><font size="2" face="Courier New">Registrant Postal Code: 85284</font></div><div><font size="2" face="Courier New">Registrant Country: US</font></div><div><font size="2" face="Courier New">Registrant Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Registrant Phone Ext:</font></div><div><font size="2" face="Courier New">Registrant Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Registrant Fax Ext:</font></div><div><font size="2" face="Courier New">Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Admin ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Admin Name: Registration Private</font></div><div><font size="2" face="Courier New">Admin Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Admin Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Admin Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Admin City: Tempe</font></div><div><font size="2" face="Courier New">Admin State/Province: Arizona</font></div><div><font size="2" face="Courier New">Admin Postal Code: 85284</font></div><div><font size="2" face="Courier New">Admin Country: US</font></div><div><font size="2" face="Courier New">Admin Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Admin Phone Ext:</font></div><div><font size="2" face="Courier New">Admin Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Admin Fax Ext:</font></div><div><font size="2" face="Courier New">Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Registry Tech ID: Not Available From Registry</font></div><div><font size="2" face="Courier New">Tech Name: Registration Private</font></div><div><font size="2" face="Courier New">Tech Organization: Domains By Proxy, LLC</font></div><div><font size="2" face="Courier New">Tech Street: DomainsByProxy.com</font></div><div><font size="2" face="Courier New">Tech Street: 2155 E Warner Rd</font></div><div><font size="2" face="Courier New">Tech City: Tempe</font></div><div><font size="2" face="Courier New">Tech State/Province: Arizona</font></div><div><font size="2" face="Courier New">Tech Postal Code: 85284</font></div><div><font size="2" face="Courier New">Tech Country: US</font></div><div><font size="2" face="Courier New">Tech Phone: +1.4806242599</font></div><div><font size="2" face="Courier New">Tech Phone Ext:</font></div><div><font size="2" face="Courier New">Tech Fax:&nbsp;</font></div><div><font size="2" face="Courier New">Tech Fax Ext:</font></div><div><font size="2" face="Courier New">Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=mastrowall.com</font></div><div><font size="2" face="Courier New">Name Server: NS11.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">Name Server: NS12.DOMAINCONTROL.COM</font></div><div><font size="2" face="Courier New">DNSSEC: unsigned</font></div><div><font size="2" face="Courier New">URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/</font></div><div><font size="2" face="Courier New">&gt;&gt;&gt; Last update of WHOIS database: 2023-12-27T22:47:27Z &lt;&lt;&lt;</font></div><div><font size="2" face="Courier New">For more information on Whois status codes, please visit https://icann.org/epp</font></div> `;
+      const contentArray = {
+        HOME: reginone,
+        FeedGist: reginone,
+        QuBit: reginone,
+        MONOLOGUE: reginone,
+        Genesis: reginone,
+        Cresource: reginone,
+        mhome: regintwo,
+        mwallsrvc: regintwo,
+      };
+      function showModal(linkName) {
+        const modalContentElement = document.getElementById("modalContent");
+        modalContentElement.innerHTML = contentArray[linkName];
+        const modalElement = document.getElementById("contentModal");
+        modalElement.style.display = "block";
+      }
+      function closeModal() {
+        const modalElement = document.getElementById("contentModal");
+        modalElement.style.display = "none";
+      }
+      window.onclick = function (event) {
+        const modalElement = document.getElementById("contentModal");
+        if (event.target === modalElement) {
+          modalElement.style.display = "none";
+        }
+      };
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
