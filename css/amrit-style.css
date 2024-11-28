@@ -18,7 +18,7 @@ html {
   background-color: #d8d6d200;
   z-index: 10;
   padding: 20px;
-  padding-top: 10%;
+  padding-top: 22vh;
 }
 .video-background {
   position: fixed;
@@ -28,6 +28,7 @@ html {
   height: 100vh;
   z-index: 0;
   overflow: hidden;
+  /* display: none; */
 }
 
 .embed-responsive-item {
@@ -39,8 +40,9 @@ html {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   object-fit: cover;
-  filter: blur(2px);
+  filter: blur(20px);
   animation: hueRotate 0.1s infinite linear;
+  opacity: 0.8;
 }
 @keyframes hueRotate {
   0% {
@@ -58,27 +60,31 @@ html {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 8rem;
   font-weight: 600;
-  color: #f7f7f7d7;
+  color: #f7f7f7;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 0px #00a2ff;
+  text-shadow: 2px 4px 10px #000000;
 }
 .main-title .ttlam {
-  width: 165px;
+  width: 16.5%;
+  height: auto;
+  margin-bottom: 5px;
   background-color: #1f1f1f4b;
   display: inline-block;
   text-align: center;
   background-image: url("/corp-drive/imgsource/backam.gif");
   background-size: 150% 150%;
-  filter: grayscale(0.6);
+  filter: grayscale(1);
 }
 
 .acorp-info .secondary-title {
-  font-family: "Arial Black", Gadget, sans-serif;
-  background-color: #000000a0;
-  border-radius: 2px;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fbfbfbf4;
+  color: #0b0b0bce;
+  font-size: 26px;
+  padding: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .reshold {
@@ -102,9 +108,16 @@ html {
   border: 2px dashed #e41414;
   cursor: pointer;
   font-size: 16px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .startlinks p:hover {
   opacity: 0.7;
+}
+.startlinks a {
+  display: inline-block;
 }
 
 .startlinks a {
@@ -134,17 +147,19 @@ html {
 }
 
 .footer-button {
-  background-color: #6666666c;
-  color: #ebebeb;
+  background-color: #ffffff;
+  color: #181818;
   border: none;
   padding: 5px;
   cursor: pointer;
   width: 150px;
   border-radius: 5px;
-  box-shadow: 2px 2px 0px 0px #686868d7;
+  box-shadow: 2px 2px 0px 0px #b2b2b2e1;
   margin-right: 2px;
 }
-
+.footer-button:hover {
+  opacity: 0.8;
+}
 .overlay {
   height: 100%;
   width: 0;

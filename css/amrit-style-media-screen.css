@@ -1,48 +1,42 @@
 @media screen and (max-width: 600px) {
   .acorp-info {
-    padding-top: 30%;
+    padding-top: 30vh;
   }
   .acorp-info .main-title {
-    margin-top: 10%;
     font-size: 2.5rem;
   }
 
   .main-title .ttlam {
-    width: 60px;
-    text-shadow: 1px 1px 0px #00a2ff;
+    text-shadow: 1px 1px 2px #000000;
   }
 
   .acorp-info .secondary-title {
-    font-size: 10px;
+    font-size: 9px;
     padding: 5px;
   }
   .startlinks p {
     font-size: 12px;
+    padding: 5px;
   }
   .footer {
     font-size: 12px;
   }
   .footer-button {
-    width: 120px;
-    padding: 2px 3px;
+    width: 100px;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+  .acorp-info {
+    padding-top: 30vh;
+  }
   .acorp-info .main-title {
-    margin-top: 15%;
-    font-size: 4rem;
+    font-size: 4.25rem;
     font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 600;
-  }
-
-  .main-title .ttlam {
-    width: 100px;
   }
 
   .acorp-info .secondary-title {
     font-size: 16px;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-weight: 600;
   }
 }

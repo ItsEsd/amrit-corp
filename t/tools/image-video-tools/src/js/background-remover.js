@@ -60,52 +60,60 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.style.marginTop = "10px";
 
     const file = upload.files[0];
-    const formData = new FormData();
-    formData.append("image_file", file);
-    formData.append("size", "auto");
-    fetch("../config.json")
-      .then((response) => response.json())
-      .then((config) => {
-        const apiKey = config.removeBgApiKey;
-        // https://sonnguyenhoang.com/ :: https://github.com/hoangsonww
-        // API Reference: https://www.remove.bg/
-        fetch("https://api.remove.bg/v1.0/removebg", {
-          method: "POST",
-          headers: {
-            "X-Api-Key": apiKey,
-          },
-          body: formData,
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.blob();
-          })
-          .then((blob) => {
-            const processedImageUrl = URL.createObjectURL(blob);
-            updateImagePreview(processedImageUrl, preview);
-            downloadBtn.disabled = false;
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            message.textContent =
-              "Error removing background. Your image might not have a clear subject. Please try again with a different image.";
-            message.style.display = "block";
-          })
-          .finally(() => {
-            removeBgBtn.disabled = false;
-            loader.style.display = "none";
-          });
-      })
-      .catch((error) => {
-        console.error("Error loading config:", error);
-      });
+    if (!file) {
+      alert("Please upload an image first.");
+      removeBgBtn.disabled = false;
+      loader.style.display = "none";
+      return;
+    }
+
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      ctx.drawImage(img, 0, 0);
+
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        const a = data[i + 3];
+
+        if (r > 200 && g > 200 && b > 200) {
+          data[i + 3] = 0;
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+
+      const processedImageUrl = canvas.toDataURL("image/png");
+      updateImagePreview(processedImageUrl, preview);
+
+      downloadBtn.dataset.url = processedImageUrl;
+
+      downloadBtn.disabled = false;
+
+      loader.style.display = "none";
+      removeBgBtn.disabled = false;
+    };
+
+    img.onerror = () => {
+      alert("Error loading the image. Please try a different file.");
+      removeBgBtn.disabled = false;
+      loader.style.display = "none";
+    };
   });
 
   downloadBtn.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = processedImageUrl;
+    link.href = downloadBtn.dataset.url;
     link.download = "no-bg-image.png";
     link.click();
   });
