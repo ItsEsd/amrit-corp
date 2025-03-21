@@ -10,11 +10,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/rotator.css" />
 
     <meta name="theme-color" content="#007bff" />
   </head>
-
+  <style>
+    body {
+      background: #242424;
+    }
+    iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border: 0px;
+    }
+  </style>
   <body>
     <div id="navbar">
       <a id="header-link" href="../../index.html">
@@ -25,47 +33,25 @@
       <div>
         <a href="../../index.html">Resizer</a>
         <a href="cropper.html">Cropper</a>
-        <a
-          href="rotator.html"
-          style="text-decoration: underline; color: #121212"
-          >Rotator</a
-        >
+        <a href="rotator.html">Rotator</a>
         <a href="filter.html">Filters</a>
         <a href="converter.html">Format Converter</a>
         <a href="background-remover.html">Background Remover</a>
         <a href="watermarker.html">Watermarker</a>
         <a href="thumbnail-generator.html">Thumbnail Generator</a>
         <a href="sound-remover.html">Sound Remover</a>
-        <a href="polotno-studio.html">Polotno Studio</a>
+        <a
+          href="polotno-studio.html"
+          style="text-decoration: underline; color: #121212"
+          >Polotno Studio</a
+        >
       </div>
     </div>
-    <div id="container">
-      <div id="controls">
-        <p><strong>Image Rotator & Flipper</strong></p>
-        <input
-          type="file"
-          id="upload"
-          accept="image/*"
-          style="color: black !important"
-        />
-        <p id="message">
-          Please upload an image to enable rotation and flipping.
-        </p>
-        <button id="rotate-btn" disabled>Rotate Image</button>
-        <button id="flip-horizontal-btn" disabled>Flip Horizontal</button>
-        <button id="flip-vertical-btn" disabled>Flip Vertical</button>
-        <button id="download-btn" disabled>Download Image</button>
-      </div>
-      <div id="preview">
-        <p><strong>Preview</strong></p>
-        <canvas id="canvas"></canvas>
-      </div>
-    </div>
-
+    <iframe src="https://studio.polotno.com"></iframe>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()">
       <i class="fas fa-moon"></i>
     </button>
-    <script src="../js/rotator.js"></script>
     <script src="../../src/js/info-button.js"></script>
+    <script src="../js/watermarker.js"></script>
   </body>
 </html>
