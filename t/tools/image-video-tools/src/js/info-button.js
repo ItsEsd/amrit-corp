@@ -49,6 +49,3 @@ function createInfoButton() {
   container.appendChild(button);
   container.appendChild(infoMessage);
 }
-
-// Call the function to create the button and message when the page loads
-window.onload = createInfoButton;

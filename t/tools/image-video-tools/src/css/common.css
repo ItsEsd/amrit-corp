@@ -283,6 +283,55 @@ body.dark-mode .info-button svg {
   background-color: #d32f2f;
 }
 
+/* Scroll container to wrap the links and buttons */
+.scroll-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 10px;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+/* Left and Right Scroll buttons */
+.scroll-leftic,
+.scroll-rightic {
+  cursor: pointer;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 50%;
+  color: white;
+  transition: background 0.2s;
+}
+
+.scroll-leftic:hover,
+.scroll-rightic:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Content inside the scroll */
+.scroll-content {
+  display: flex;
+  gap: 15px;
+  padding: 5px 10px;
+}
+
+/* Navigation Links */
+.scroll-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.scroll-content a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 @media (max-width: 768px) {
   #navbar div {
     background: linear-gradient(to right, #00000000, #ffffff5c);
