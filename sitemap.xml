@@ -86,7 +86,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+   <url>
+    <loc>https://astro.mastrowall.in</loc>
+    <lastmod>2025-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Tools -->
   <url>
     <loc>https://image-search.amrit-corp.com</loc>
@@ -102,6 +107,18 @@
   </url>
   <url>
     <loc>https://rss-feed.amrit-corp.com</loc>
+    <lastmod>2025-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://dealtodealers.com</loc>
+    <lastmod>2025-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://comment-api.amrit-corp.com</loc>
     <lastmod>2025-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
