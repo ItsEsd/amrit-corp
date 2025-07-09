@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautify and other tools - HTML Viewer / JS Code Obfuscator</title>
+    <link rel="icon" type="image/x-icon" href="https://amrit-corp.com/favicon.ico" />
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      nav {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 7px 10px;
+        font-size: 14px;
+        display: inline-block;
+        transition: background 0.3s;
+        cursor: pointer;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      iframe {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        border: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          justify-content: flex-start;
+        }
+
+        nav a {
+          padding: 10px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a onclick="changeIframe('https://codebeautify.org/htmlviewer')">HTML Viewer</a>
+      <a onclick="changeIframe('https://codebeautify.org/javascript-obfuscator')">JS Code Obfuscator</a>
+      <a onclick="changeIframe('https://jsonformatter.org/')">JSON Formatter</a>
+      <a onclick="changeIframe('https://jsonformatter.org/xml-formatter')">XML Formatter</a>
+      <a onclick="changeIframe('https://codebeautify.org/image-to-base64-converter')">Image to Base 64</a>
+      <a onclick="changeIframe('https://codebeautify.org/encrypt-decrypt')">Encryption-Decryption</a>
+      <a onclick="changeIframe('https://codebeautify.org/html-table-generator')">Table Generator</a>
+    </nav>
+    <iframe id="main-frame" class="tab-content active" allow="picture-in-picture" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation allow-presentation allow-downloads" src="https://codebeautify.org/htmlviewer"></iframe>
+    <script>
+      function _0x12d4() {
+        var _0x418d41 = ['18FpOeaK', 'getElement', '2722013bphGEW', '4370128dTSzsG', '9075825OtkFxx', 'main-frame', 'wkZNx', '131012crhfcO', '57phVvEA', '112498RQVdwp', '27738940hzMqUM', 'ById', 'src', '35BRNYVd', '1214119zuisFa'];
+        _0x12d4 = function() {
+          return _0x418d41;
+        };
+        return _0x12d4();
+      }(function(_0x153498, _0x24d86c) {
+        var _0x35f10a = _0x1c0e,
+          _0x223e62 = _0x153498();
+        while (!![]) {
+          try {
+            var _0x396ec4 = -parseInt(_0x35f10a(0x116)) / (-0x2671 + 0x208d + 0x5e5) + -parseInt(_0x35f10a(0x111)) / (-0x1f3a + 0x18be + 0x33f * 0x2) * (parseInt(_0x35f10a(0x110)) / (0x1b44 + -0x2184 + 0x643)) + -parseInt(_0x35f10a(0x10f)) / (0x141d + -0x2 * 0x8b5 + 0xe5 * -0x3) * (parseInt(_0x35f10a(0x115)) / (-0xf2 + 0x7ae + -0x6b7)) + -parseInt(_0x35f10a(0x117)) / (-0x67e * -0x1 + 0xe62 + -0x14da) * (parseInt(_0x35f10a(0x10a)) / (0x1 * 0x20ef + 0xb * 0x139 + 0x1 * -0x2e5b)) + parseInt(_0x35f10a(0x10b)) / (0x1fb9 + -0x1 * 0xae1 + -0x14d0) + parseInt(_0x35f10a(0x10c)) / (-0x1 * -0x1f12 + -0x90c + -0x15fd) + parseInt(_0x35f10a(0x112)) / (0x249c + -0x1 * -0x113c + 0x61 * -0x8e);
+            if (_0x396ec4 === _0x24d86c) break;
+            else _0x223e62['push'](_0x223e62['shift']());
+          } catch (_0x1a5eda) {
+            _0x223e62['push'](_0x223e62['shift']());
+          }
+        }
+      }(_0x12d4, 0x1a * -0x86c1 + 0xc9e37 + 0xafc02));
+
+      function _0x1c0e(_0x1faa74, _0x3ec27d) {
+        var _0x5b2018 = _0x12d4();
+        return _0x1c0e = function(_0x4a4591, _0x2c36f1) {
+          _0x4a4591 = _0x4a4591 - (-0x253d + 0xe87 + 0x17bf);
+          var _0x202a7d = _0x5b2018[_0x4a4591];
+          return _0x202a7d;
+        }, _0x1c0e(_0x1faa74, _0x3ec27d);
+      }
+
+      function changeIframe(_0x2879e9) {
+        var _0xbd8ffc = _0x1c0e,
+          _0x362c97 = {
+            'wkZNx': _0xbd8ffc(0x10d)
+          };
+        document[_0xbd8ffc(0x109) + _0xbd8ffc(0x113)](_0x362c97[_0xbd8ffc(0x10e)])[_0xbd8ffc(0x114)] = _0x2879e9;
+      }
+    </script>
+</html>
