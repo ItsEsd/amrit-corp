@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image & Video Tools</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/thumbnail-generator.css" />
+
+    <meta name="theme-color" content="#007bff" />
+    <style>
+    body{overflow:hidden}
+    iframe{width:100%;height:calc(100vh - 65px);border:none;}
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <a id="header-link" href="../../index.html">
+        <span class="title"
+          ><img src="../../assets/favicon.ico" style="width: 30px"
+        /></span>
+      </a>
+      <div>
+        <a href="../../index.html">Resizer</a>
+        <a href="cropper.html">Cropper</a>
+        <a href="rotator.html">Rotator</a>
+        <a href="filter.html">Filters</a>
+        <a href="converter.html">Format Converter</a>
+        <a href="webp-converter.html"  style="text-decoration: underline; color: #121212">WEBP Converter</a>
+        <a href="background-remover.html">Background Remover</a>
+        <a href="watermarker.html">Watermarker</a>
+        <a
+          href="thumbnail-generator.html"
+          >Thumbnail Generator</a
+        >
+        <a href="sound-remover.html">Sound Remover</a>
+        <a href="polotno-studio.html">Polotno Studio</a>
+      </div>
+    </div>
+    <div>
+      <iframe srcdoc="<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Image to WEBP Converter</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js'></script>
+    <link
+      href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'
+      rel='stylesheet'
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: #f0f2f5;
+        padding: 20px 20px;
+        padding-bottom: 0px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+        background-image: url('background-webp.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: #fff;
+        background-color: #0056b3;
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin-top: 10vh;
+      }
+
+      #upload {
+        border: 2px dashed #bbb;
+        padding: 35px;
+        background: #fff;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      #upload:hover {
+        background-color: #f8f9fa;
+        border-color: #007bff;
+      }
+
+      input[type='file'] {
+        display: none;
+      }
+
+      .preview {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 600px;
+        max-height: 260px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        padding: 10px;
+        background-color: #bbb;
+        border-radius: 10px;
+      }
+
+      .file-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin: 12px 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .filename {
+        font-size: 15px;
+        color: #444;
+        margin-right: 10px;
+      }
+
+      .download-link {
+        background: #28a745;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.3s;
+      }
+
+      .download-link:hover {
+        background: #218838;
+      }
+
+      #downloadAllBtn {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 6px;
+        margin-top: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: none;
+      }
+
+      #downloadAllBtn:hover {
+        background-color: #0056b3;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      footer {
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+      }
+      @media (max-width: 500px) {
+        .file-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .download-link {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image to WEBP Converter</h1>
+
+    <label id='upload'>
+      <strong>Click or Drag & Drop</strong><br />JPG/PNG Files Here
+      <input
+        type='file'
+        id='fileInput'
+        accept='image/png, image/jpeg'
+        multiple
+      />
+    </label>
+
+    <div class='preview' id='preview'></div>
+    <button id='downloadAllBtn'>Download All as ZIP</button>
+    <footer>
+      <div>
+        <div>
+          <a href='https://amrit-corp.com/privacy-policy'>Privacy</a
+          >&nbsp;|&nbsp;<a href='https://amrit-corp.com/terms-of-service'
+            >Terms</a
+          >&nbsp;|&nbsp;<a href='https://amrit-corp.com/units/'
+            >Operational units</a
+          >&nbsp;|&nbsp;© 2024 <a href='https://amrit-corp.com/'>A M R I T</a>.
+          All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src='https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.0/dist/ffmpeg.min.js'></script>
+    <script>
+      const fileInput = document.getElementById('fileInput');
+      const preview = document.getElementById('preview');
+      const downloadAllBtn = document.getElementById('downloadAllBtn');
+      const upload = document.getElementById('upload');
+
+      let convertedFiles = [];
+
+      // Drag & drop styling
+      upload.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        upload.style.borderColor = '#007bff';
+        upload.style.backgroundColor = '#f1faff';
+      });
+
+      upload.addEventListener('dragleave', () => {
+        upload.style.borderColor = '#bbb';
+        upload.style.backgroundColor = '#fff';
+      });
+
+      upload.addEventListener('drop', (e) => {
+        e.preventDefault();
+        upload.style.borderColor = '#bbb';
+        upload.style.backgroundColor = '#fff';
+        handleFiles(e.dataTransfer.files);
+      });
+
+      fileInput.addEventListener('change', () => {
+        handleFiles(fileInput.files);
+        document.getElementsByTagName('h1')[0].style.marginTop = '15vh';
+        downloadAllBtn.style.display = 'none';
+      });
+
+      function handleFiles(files) {
+        preview.innerHTML = '';
+        convertedFiles = [];
+
+        [...files].forEach((file) => {
+          if (!file.type.startsWith('image/')) return;
+
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            const img = new Image();
+            img.onload = function () {
+              const canvas = document.createElement('canvas');
+              canvas.width = img.width;
+              canvas.height = img.height;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0);
+
+              canvas.toBlob(
+                (blob) => {
+                  const webpFileName = file.name.replace(
+                    /\.(jpg|jpeg|png)$/i,
+                    '.webp'
+                  );
+                  const webpURL = URL.createObjectURL(blob);
+
+                  convertedFiles.push({ name: webpFileName, blob });
+
+                  const card = document.createElement('div');
+                  card.className = 'file-card';
+
+                  const name = document.createElement('div');
+                  name.className = 'filename';
+                  name.textContent = file.name;
+
+                  const link = document.createElement('a');
+                  link.href = webpURL;
+                  link.download = webpFileName;
+                  link.textContent = 'Download';
+                  link.className = 'download-link';
+
+                  card.appendChild(name);
+                  card.appendChild(link);
+                  preview.appendChild(card);
+
+                  if (convertedFiles.length > 0) {
+                    downloadAllBtn.style.display = 'inline-block';
+                    document.getElementsByTagName('h1')[0].style.marginTop =
+                      '0vh';
+                  }
+                },
+                'image/webp',
+                0.9
+              );
+            };
+            img.src = event.target.result;
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      downloadAllBtn.addEventListener('click', () => {
+        if (convertedFiles.length === 0) return;
+
+        const zip = new JSZip();
+        convertedFiles.forEach((file) => {
+          zip.file(file.name, file.blob);
+        });
+
+        zip.generateAsync({ type: 'blob' }).then((content) => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(content);
+          a.download = 'converted_images.zip';
+          a.click();
+        });
+      });
+    </script>
+  </body>
+</html>">
+    </div>
+
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+      <i class="fas fa-moon"></i>
+    </button>
+    <script src="../../src/js/info-button.js"></script>
+    <script src="../js/thumbnail-generator.js"></script>
+  </body>
+</html>
