@@ -37,19 +37,18 @@
     <div class="neurotoy">
       <center>
         <div id="elztit">
+          <span class="title">ELIZA</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="inbrf"
             fill="currentColor"
             class="bi bi-info-circle-fill"
             viewBox="0 0 16 16"
-            onclick="openinfo()"
           >
             <path
               d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
-            />
-          </svg>
-          <span class="title">ELIZA</span> <br />
+            /></svg
+          ><br />
           <div class="descp">
             <font size="2"
               ><a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a> is an
@@ -146,10 +145,11 @@
         const data = [
           {
             buttonText:
-              "<img style='filter:grayscale(1);width:25px;padding:5px 7px;border-radius:5px;background-color:white;' src='https://amrit-corp.com/corp-drive/imgsource/amritlogo.png' title='AMRIT-Corp.com'>",
+              "<img style='filter:grayscale(1);width:20px;padding:5px 7px;border-radius:5px;background-color:white;' src='https://amrit-corp.com/corp-drive/imgsource/amritlogo.png' title='AMRIT-Corp.com'>",
             buttonCSS: {
-              bottom: "28px",
-              left: "20px",
+              top: "20px",
+              right: "20px",
+              // display:"none",
               position: "fixed",
               display: "block",
               background: "white",
@@ -159,12 +159,12 @@
               padding: "2px",
               zIndex: "1000",
               borderRadius: "5px",
-              boxShadow: " -5px -5px 0px 0px black",
+              boxShadow: " -5px -5px 0px 0px grey",
             },
             content: `<base target="_blank"><div style="padding: 10px; background: rgb(226, 226, 226); border-radius: 10px; color: rgb(33, 37, 41); font-family: &quot;Courier New&quot;, Courier, monospace; font-size: 14px;"><p style="font-weight: 600; color: rgb(69, 69, 69); line-height: 0px; padding-left: 2px;display:block;">Mind Without Fear - MWF</p>-&nbsp;<a target="_blank" href="https://feed.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">Feed Gist</a>&nbsp;|&nbsp;<a target="_blank" href="https://qubit.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">QuBit</a>&nbsp;|&nbsp;<a target="_blank" href="https://imi.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">MONOLOGUE</a>&nbsp;|&nbsp;<a target="_blank" href="https://admin.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">Admin</a>&nbsp;|&nbsp;<a target="_blank" href="https://flashbite.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">FlashBite</a>&nbsp;|&nbsp;<a href="https://www.mwfbiz.com/" style="color: rgb(69, 69, 69); display: inline-block;">🌐 mwfbiz.COM</a></div><hr style="color: rgb(33, 37, 41); font-family: &quot;Courier New&quot;, Courier, monospace; font-size: 14px;"><div style="padding: 10px; background: rgb(226, 226, 226); border-radius: 10px; color: rgb(33, 37, 41); font-family: &quot;Courier New&quot;, Courier, monospace; font-size: 14px;"><p style="font-weight: 600; color: rgb(69, 69, 69); line-height: 10px; padding-left: 2px;">MASTROWALL || An Art of Learning</p>-&nbsp;<a target="_blank" href="https://e-enroll.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">E-ENROLL 🔏</a>&nbsp;|&nbsp;<a target="_blank" href="https://mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">SERVICES 🏫</a>&nbsp;|&nbsp;<a target="_blank" href="https://exam-portal.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">EXAM PORTAL 🔠</a>&nbsp;|&nbsp;<a target="_blank" href="https://library.mastrowall.in/" style="color: rgb(69, 69, 69); display: inline-block;">LIBRARY 📚</a>&nbsp;|&nbsp;<a target="_blank" href="https://telemedia.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">TELEMEDIA 📺</a>&nbsp;|&nbsp;<a href="https://quiz.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">QUIZ 🔡</a>&nbsp;|&nbsp;<a target="_blank" href="https://sketch.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">SKETCHPAD 🖼️</a>&nbsp;|&nbsp;<a target="_blank" href="https://astro.mastrowall.in/" style="color: rgb(69, 69, 69); display: inline-block;">FORUM 👥</a>&nbsp;|&nbsp;<a target="_blank" href="https://blog.mastrowall.in/" style="color: rgb(69, 69, 69); display: inline-block;">BLOG 📝</a>&nbsp;|&nbsp;<a target="_blank" href="https://e-reset.mastrowall.com/" style="color: rgb(69, 69, 69); display: inline-block;">E-RESET 🛠️</a>&nbsp;|&nbsp;<a target="_blank" href="https://home.mastrowall.in/" style="color: rgb(69, 69, 69); display: inline-block;">MASTROWALL In 🧑‍🏫</a></div><hr style="color: rgb(33, 37, 41); font-family: &quot;Courier New&quot;, Courier, monospace; font-size: 14px;"><p style="font-weight: 500; color: rgb(69, 69, 69); line-height: 20px; padding-left: 2px; font-family: &quot;Courier New&quot;, Courier, monospace; font-size: 13px;"><a style="display: inline-block; margin-bottom: 3px; cursor: pointer;" href="https://image-search.amrit-corp.com">Image search 🔍</a>&nbsp;|&nbsp;<a style="display: inline-block; margin-bottom: 3px; cursor: pointer;" href="https://amrit-corp.com/eliza">Eliza (1966)</a>&nbsp;|&nbsp;<a href="https://g2faq.amrit-corp.com" style="display: inline-block; margin-bottom: 3px; cursor: pointer;">🤖 G2 FAQ</a>&nbsp;|&nbsp;<a style="display: inline-block; margin-bottom: 3px; cursor: pointer;" href="https://scrapia.amrit-corp.com">Scrapia</a>&nbsp;|&nbsp;<a href="https://rss-feed.amrit-corp.com" style="display: inline-block;margin-bottom:3px; cursor: pointer;">News RSS&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Generic_Feed-icon.svg/384px-Generic_Feed-icon.svg.png" style="width: 12px; margin-top: -3px;"></a></p><div style="font-family: &quot;Courier New&quot;, Courier, monospace;text-align:center;width:100%;font-size:8px;color:grey;"><a href="https://amrit-corp.com/terms-of-service">Terms of Service</a> <a href="https://amrit-corp.com/privacy-policy">Privacy Policy</a> | Advance Media Representational Information Technologies - AMRIT. (c) amrit-corp.com</div>`,
             contentCSS: {
-              bottom: "75px",
-              left: "20px",
+              top: "60px",
+              right: "20px",
               position: "fixed",
               display: "none",
               margin: "10px 0",
@@ -178,7 +178,7 @@
               overflowX: "hidden",
               textAlign: "left",
               borderRadius: "10px",
-              boxShadow: " 5px 5px 0px 0px black",
+              boxShadow: " 5px 5px 0px 0px grey",
             },
           },
         ];

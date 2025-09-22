@@ -614,13 +614,14 @@ function write() {
 function refresh() {
   setTimeout("write()", 10000);
 }
-
-function openinfo() {
+document.getElementById("inbrf").addEventListener("click", function () {
   var elem = document.getElementById("infoelz");
-  if (elem.style.display === "none") {
+  var currentDisplay = window.getComputedStyle(elem).display;
+  if (currentDisplay === "none") {
     elem.style.display = "block";
   } else {
     elem.style.display = "none";
   }
-}
+});
+
 // -->

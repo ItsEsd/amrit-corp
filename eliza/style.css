@@ -2,6 +2,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow-y: auto;
   margin: 0;
   background-color: #383838;
   background-image: url();
@@ -62,7 +63,7 @@ html {
   cursor: pointer;
 }
 #inbrf {
-  float: right;
+  /* float: right; */
   margin-right: 5px;
   width: 20px;
   height: 20px;
@@ -105,6 +106,9 @@ a {
 }
 @media screen and (max-width: 600px) {
   .neurotoy textarea {
-    height: 40vh !important;
+    height: 60vh !important;
+  }
+  #comhead {
+    padding-bottom: 20px;
   }
 }

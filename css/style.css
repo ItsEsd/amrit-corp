@@ -1,6 +1,6 @@
 /*** Spinner ***/
 body {
-  display: none;
+  /* display: none; */
 }
 #spinner {
   opacity: 0;
