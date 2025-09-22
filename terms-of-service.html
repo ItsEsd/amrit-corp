@@ -9,16 +9,17 @@
   <style>
     body {
       font-family: "Courier New", Courier, monospace;
-      width: 100%;
-      height:100%;
-      overflow-x: hidden;
-      margin:0px;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      overflow-y: auto;
+      margin: 0px;
     }
-    html{
-      width:100%;
-      height:100%;
+    html {
+      width: 100vw;
+      height: 100vh;
       overscroll-behavior: hidden;
-        }
+    }
     header {
       text-align: center;
       line-height: 1.6;
@@ -29,7 +30,7 @@
       padding:10px !important;
       padding-bottom:100px !important;
       line-height: 1.6;
-      width: 100%;
+      width: 80%;
       max-width: 800px;
       text-align: left;
       padding-bottom: 60px;
@@ -43,6 +44,7 @@
       bottom: 0;
       left: 0px;
       width: 100%;
+      padding:10px;
       color: #595959 !important;
       font-size: 14px !important;
     }
@@ -96,18 +98,38 @@
     li{
       margin:5px;
     }
+    .main{
+      display: block;
+      line-height: 1.6;
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: left;
+      padding: 10px;
+      padding-bottom: 80px;
+      font-size: 14px;
+      word-break: break-word;
+      color: #595959;
+    } .footer {
+      text-align: center;
+      background-color: #f2f2f2;
+      position: fixed;
+      bottom: 0;
+      padding: 10px;
+      left: 0px;
+      color: #595959 !important;
+      font-size: 14px !important;
+      width: 100%;
+    }
   </style>
   <body>
-    <header>
-      <h1>Terms of Service</h1>
-    </header>
-    <center>
-      <section>
+      <div class="main">
+        <h1>Terms of Service</h1>
         <div data-custom-class="body">
           <div align="center" style="text-align: left;">
             <div class="acorpit" style="line-height: 1.5;"><br></div>
             <div class="acorpit" data-custom-class="subtitle" style="line-height: 1.5;"><strong>Last updated</strong>
-              <bdt><strong>December 31, 2023</strong></bdt>
+              <bdt><strong>September 23, 2025</strong></bdt>
             </div>
             <div class="acorpit" style="line-height: 1.1;"><br></div>
             <div style="line-height: 1.5;"><strong><span data-custom-class="heading_1">AGREEMENT TO OUR LEGAL TERMS</span></strong></div>
@@ -1164,8 +1186,7 @@
 
         </style>
         </div>
-      </section>
-    </center>
-    <footer> &copy; 2024 Advance Media Representational Information Technologies. A M R I T.  All Rights Reserved. </footer>
-  </body>
+        <div class="footer"> &copy; 2024 Advance Media Representational <br>Information Technologies. A M R I T.  All Rights Reserved. </footer>
+        </div>
+    </body>
 </html>
