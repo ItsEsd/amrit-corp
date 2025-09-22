@@ -1,6 +1,7 @@
-/********** Template CSS **********/
-
 /*** Spinner ***/
+body {
+  display: none;
+}
 #spinner {
   opacity: 0;
   visibility: hidden;

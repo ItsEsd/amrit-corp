@@ -62,4 +62,14 @@
     loop: true,
     nav: false,
   });
+
+  const loca = window.location.hostname;
+  if (loca.endsWith("amrit-corp.com")) {
+    document.body.style.display = "block";
+  } else {
+    document.body.innerHTML = "";
+  }
+  setInterval(function () {
+    console.clear();
+  }, 100);
 })(jQuery);
