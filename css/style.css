@@ -60,7 +60,7 @@ body {
 }
 
 .navbar {
-  padding: 15px 0;
+  padding: 15px 0 10px 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
 }
@@ -128,8 +128,8 @@ button:disabled {
 /*** Hero Header ***/
 .hero-header {
   margin-top: -100px;
-  padding-top: 150px;
-  background: url(../img/hero-bg.jpg) top center no-repeat;
+  padding-top: 100px;
+  background: url(../img/hero-cover.webp) top center no-repeat;
   background-size: cover;
 }
 
@@ -384,8 +384,9 @@ button:disabled {
 
 /*** Newsletter ***/
 .newsletter {
-  background: url(../img/hero-bg.jpg) bottom right no-repeat;
+  background: url(../img/hero-bg.webp) bottom right no-repeat;
   background-size: cover;
+  background-color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -621,4 +622,9 @@ button:disabled {
 }
 button:active {
   outline: none;
+}
+@media (max-width: 992px) {
+  #ambtn {
+    max-width: 35px;
+  }
 }

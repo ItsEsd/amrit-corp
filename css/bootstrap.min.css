@@ -3734,8 +3734,8 @@ fieldset:disabled .btn {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  /* padding-top: 0.5rem; */
+  /* padding-bottom: 0.5rem; */
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3751,7 +3751,6 @@ fieldset:disabled .btn {
   height: auto;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   white-space: nowrap;
@@ -3780,13 +3779,11 @@ fieldset:disabled .btn {
   align-items: center;
 }
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: none;
   border-radius: 0px;
-  transition: box-shadow 0.15s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3990,7 +3987,6 @@ fieldset:disabled .btn {
 }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.55);
-  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-text {
