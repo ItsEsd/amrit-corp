@@ -16,16 +16,21 @@
 
   // Sticky Navbar
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
+    const isCollapsedOpen = $("#navbarCollapse").hasClass("show");
+    const scrollTop = $(this).scrollTop();
+
+    if (scrollTop > 300) {
       $(".sticky-top").addClass("bg-white shadow-sm").css({
         top: "0px",
         background: "#fff",
       });
     } else {
-      $(".sticky-top").removeClass("bg-white shadow-sm").css({
-        top: "-150px",
-        background: "transparent",
-      });
+      if (!isCollapsedOpen) {
+        $(".sticky-top").removeClass("bg-white shadow-sm").css({
+          top: "-150px",
+          background: "transparent",
+        });
+      }
     }
   });
 
@@ -62,6 +67,15 @@
     loop: true,
     nav: false,
   });
+
+  document
+    .querySelector(".navbar-toggler")
+    .addEventListener("click", function () {
+      const stickyNav = document.querySelector(".sticky-top");
+      stickyNav.classList.toggle("bg-white");
+      stickyNav.classList.toggle("shadow-sm");
+    });
+
   const loca = window.location.hostname;
   if (loca.endsWith("amrit-corp.com")) {
     document.body.style.display = "block";

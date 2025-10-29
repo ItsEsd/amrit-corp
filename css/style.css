@@ -57,6 +57,7 @@ body {
 .sticky-top {
   top: -150px;
   transition: 0.5s;
+  background: white;
 }
 
 .navbar {
@@ -386,7 +387,6 @@ button:disabled {
 .newsletter {
   background: url(../img/hero-bg.webp) bottom right no-repeat;
   background-size: cover;
-  background-color: #fff;
 }
 
 @media (min-width: 992px) {
