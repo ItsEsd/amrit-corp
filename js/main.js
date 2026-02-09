@@ -155,12 +155,12 @@
   const initialCount = getMessageCountFromTitle(document.title);
   updateBadge(initialCount !== null ? initialCount : 0);
 
-  // const loca = window.location.hostname;
-  // if (loca.endsWith("amrit-corp.com")) {
-  //   document.body.style.display = "block";
-  // } else {
-  //   document.body.innerHTML = "";
-  // }
+  const loca = window.location.hostname;
+  if (loca.endsWith("amrit-corp.com")) {
+    document.body.style.display = "block";
+  } else {
+    document.body.innerHTML = "";
+  }
   setInterval(function () {
     console.clear();
   }, 100);
