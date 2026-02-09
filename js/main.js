@@ -20,16 +20,11 @@
   $(window).scroll(function () {
     const isCollapsedOpen = $("#navbarCollapse").hasClass("show");
     const scrollTop = $(this).scrollTop();
-
     if (scrollTop > 300) {
       $(".sticky-top").addClass("bg-white shadow-sm").css({
         top: "0px",
         background: "#fff",
       });
-      if (isCollapsedOpen) {
-        navbarCollapse.hide();
-        toggleBtn.setAttribute("aria-expanded", "false");
-      }
     } else {
       if (!isCollapsedOpen) {
         $(".sticky-top").removeClass("bg-white shadow-sm").css({
@@ -39,7 +34,16 @@
       }
     }
   });
+  const clickOnCollps = document.getElementById("navbarCollapse");
+  document.addEventListener("click", (e) => {
+    if (!clickOnCollps.classList.contains("show")) return;
+    const clickInsideCollapse = clickOnCollps.contains(e.target);
 
+    if (!clickInsideCollapse) {
+      navbarCollapse.hide();
+      toggleBtn.setAttribute("aria-expanded", "false");
+    }
+  });
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -151,12 +155,12 @@
   const initialCount = getMessageCountFromTitle(document.title);
   updateBadge(initialCount !== null ? initialCount : 0);
 
-  const loca = window.location.hostname;
-  if (loca.endsWith("amrit-corp.com")) {
-    document.body.style.display = "block";
-  } else {
-    document.body.innerHTML = "";
-  }
+  // const loca = window.location.hostname;
+  // if (loca.endsWith("amrit-corp.com")) {
+  //   document.body.style.display = "block";
+  // } else {
+  //   document.body.innerHTML = "";
+  // }
   setInterval(function () {
     console.clear();
   }, 100);

@@ -706,6 +706,16 @@ button:active {
 .chat-close-btn svg {
   animation: float2 3s ease-in-out infinite;
 }
+#tawk_6989a694585bab1c339ee7f0 {
+  min-height: 550px;
+  min-width: 350px;
+  background-color: #0027cb;
+  background-image: url("/corp-drive/imgsource/offline.png");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #nummsg {
   top: -7px;
   right: 2px;
@@ -722,10 +732,10 @@ button:active {
 @keyframes float2 {
   0%,
   100% {
-    transform: translate(-0%, 0);
+    transform: translate(-0%, 5px);
   }
   50% {
-    transform: translate(-0%, -10px);
+    transform: translate(-0%, -5px);
   }
 }
 

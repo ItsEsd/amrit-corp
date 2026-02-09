@@ -52,9 +52,81 @@
     .contnt ul {
       padding: 0;
       margin: 0;
+      margin-top: 10px;
     }
-    .contnt div {
-      padding: 20px;
+
+    .projects-wrapper {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+      border: 3px solid rgba(0, 60, 128, 0.548);
+      position: relative;
+    }
+    .listsdesp {
+      top: -15px;
+      right: 25px;
+      position: absolute;
+      background-color: rgb(4, 185, 4);
+      color: white;
+      padding: 2px 10px;
+      font-size: 13px;
+      font-weight: 400;
+      border-radius: 5px;
+    }
+    .project-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #222;
+    }
+
+    .project-meta {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .project-link a {
+      color: #3030f1;
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-all;
+      display: inline-flex;
+      align-items: center;
+    }
+    .project-link a svg {
+      margin-left: 5px;
+    }
+    .project-link a:hover {
+      text-decoration: underline;
     }
     @media screen and (max-width: 768px) {
       .contnt li {
@@ -111,89 +183,273 @@
                 d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"
               /></svg
           ></span>
+          <div class="projects-wrapper">
+            <ul class="project-list">
+              <li class="project-item">
+                <span class="listsdesp">[ Monolith v1.1]</span>
+                <div class="project-title">MASTROWALL Android App</div>
+                <div class="project-meta">📱 Mobile App · 2024</div>
+                <div class="project-desc">
+                  An Android learning platform focused on exams, quizzes, and
+                  structured knowledge delivery.
+                </div>
+                <div class="project-link">
+                  <a href="https://bit.ly/4q7n92J" target="_blank"
+                    >https://bit.ly/4q7n92J<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#24d600"
+                    >
+                      <path
+                        d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q17-72 85-137t145-65q33 0 56.5 23.5T520-716v242l64-62 56 56-160 160-160-160 56-56 64 62v-242q-76 14-118 73.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-48-22-89.5T600-680v-93q74 35 117 103.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm220-358Z"
+                      /></svg
+                  ></a>
+                </div>
+              </li>
 
-          <div>
-            <ul>
-              <li>
-                MASTROWALL Android App Release - (2024)
-                <a href="https://bit.ly/mastrowall-apk"
-                  ><font color="#3030f1"
-                    ><b>https://bit.ly/mastrowall-apk</b></font
-                  ></a
-                >
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">Quiz | MASTROWALL</div>
+                <div class="project-meta">🧠 Quiz Platform · 2024</div>
+                <div class="project-desc">
+                  A fast, interactive quiz system designed for exam preparation
+                  and competitive practice.
+                </div>
+                <div class="project-link">
+                  <a href="https://quiz.mastrowall.com" target="_blank"
+                    >https://quiz.mastrowall.com<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      /></svg
+                  ></a>
+                </div>
               </li>
-              <li>
-                Quiz | MASTROWALL - (2024)
-                <a href="https://quiz.mastrowall.com"
-                  ><font color="#3030f1"
-                    ><b>https://quiz.mastrowall.com</b></font
-                  ></a
-                >
+
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">Image Search 🔍</div>
+                <div class="project-meta">🖼️ Search Tool · 2024</div>
+                <div class="project-desc">
+                  A smart image search utility aggregating visual results from
+                  multiple online sources.
+                </div>
+                <div class="project-link">
+                  <a href="https://image-search.amrit-corp.com" target="_blank">
+                    https://image-search.amrit-corp.com<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </li>
-              <li>
-                Image search 🔍 - (2024)
-                <a href="https://image-search.amrit-corp.com"
-                  ><font color="#3030f1"
-                    ><b>https://image-search.amrit-corp.com</b></font
-                  ></a
-                >
+
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">Image & Video Tools ⚒️</div>
+                <div class="project-meta">🎞️ Media Utilities · 2024</div>
+                <div class="project-desc">
+                  A collection of lightweight tools for image and video
+                  processing, conversion, and utilities.
+                </div>
+                <div class="project-link">
+                  <a href="https://bit.ly/468rE4K" target="_blank"
+                    >https://bit.ly/468rE4K<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      /></svg
+                  ></a>
+                </div>
               </li>
-              <li>
-                Image & Video Tools ⚒️ - (2024)
-                <a href="https://bit.ly/468rE4K"
-                  ><font color="#3030f1"><b>https://bit.ly/468rE4K</b></font></a
-                >
+
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">G2 FAQ 🤖</div>
+                <div class="project-meta">💬 AI FAQ System · 2024</div>
+                <div class="project-desc">
+                  An AI-powered FAQ and support system designed for fast,
+                  automated knowledge access.
+                </div>
+                <div class="project-link">
+                  <a href="https://g2faq.amrit-corp.com" target="_blank">
+                    https://g2faq.amrit-corp.com<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </li>
-              <li>
-                🤖 G2 FAQ - (2024)
-                <a href="https://g2faq.amrit-corp.com"
-                  ><font color="#3030f1"
-                    ><b>https://G2FAQ.amrit-corp.com</b></font
-                  ></a
+
+              <li class="project-item">
+                <span class="listsdesp" style="background: #f14444"
+                  >[ Live / Internal Use ]</span
                 >
+                <div class="project-title">WebChat – Video Meetings</div>
+                <div class="project-meta">📡 Communication Platform · 2025</div>
+                <div class="project-desc">
+                  Real-time chat and video conferencing solution built for
+                  seamless online interaction.
+                </div>
+                <div class="project-link">
+                  <a href="https://webchat.amrit-corp.com" target="_blank">
+                    https://webchat.amrit-corp.com<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </li>
-              <li>
-                WebChat - Video Meetings - (2025)
-                <a href="https://webchat.amrit-corp.com"
-                  ><font color="#3030f1"
-                    ><b>https://webchat.amrit-corp.com</b></font
-                  ></a
+
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">
+                  GistBox – Content Fetch Application
+                </div>
+                <div class="project-meta">📦 Content Tool · 2025</div>
+                <div class="project-desc">
+                  A smart content fetching and preview system for links, media,
+                  and embedded resources.
+                </div>
+                <div class="project-link">
+                  <a href="https://gistbox.mastrowall.com/" target="_blank">
+                    https://gistbox.mastrowall.com/<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="project-item">
+                <span class="listsdesp">[ Live ]</span>
+                <div class="project-title">
+                  DealToDealers.com | AMRIT E-Commerce
+                </div>
+                <div class="project-meta">🛒 B2B Marketplace · 2025</div>
+                <div class="project-desc">
+                  A dealer-to-dealer e-commerce platform connecting suppliers
+                  and retailers efficiently.
+                </div>
+                <div class="project-link">
+                  <a href="https://dealtodealers.com/" target="_blank">
+                    https://dealtodealers.com/<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+
+              <li class="project-item">
+                <span class="listsdesp" style="background: #f14444"
+                  >[ Live / Internal Use ]</span
                 >
+                <div class="project-title">Comment API – Smart & Scalable</div>
+                <div class="project-meta">💬 Developer API · 2026</div>
+                <div class="project-desc">
+                  A flexible and scalable commenting system API supporting
+                  nested replies and reactions.
+                </div>
+                <div class="project-link">
+                  <a href="https://comment-api.amrit-corp.com/" target="_blank">
+                    https://comment-api.amrit-corp.com/<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </li>
-              <li>
-                GistBox - Content Fetch Application - (2025)
-                <a href="https://gistbox.mastrowall.com/"
-                  ><font color="#3030f1"
-                    ><b>https://gistbox.mastrowall.com/</b></font
-                  ></a
+
+              <li class="project-item">
+                <span class="listsdesp" style="background: rgb(75, 102, 236)"
+                  >[ Under Development ]</span
                 >
+                <div class="project-title">FlashBite – Bite-sized Stories</div>
+                <div class="project-meta">📖 Story Platform · 2026</div>
+                <div class="project-desc">
+                  A short-content storytelling platform focused on quick reads
+                  and engaging narratives.
+                </div>
+                <div class="project-link">
+                  <a href="https://flashbite.mwfbiz.com/" target="_blank">
+                    https://flashbite.mwfbiz.com/
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#F19E39"
+                    >
+                      <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </li>
-              <li>
-                DealToDealers.com | AMRIT E-Commerce - (2025)
-                <a href="https://dealtodealers.com/"
-                  ><font color="#3030f1"
-                    ><b>https://dealtodealers.com/</b></font
-                  ></a
-                >
-              </li>
-              <li>
-                Comment API - Smart, Scalable Comments – Effortlessly. - (2026)
-                <a href="https://comment-api.amrit-corp.com/"
-                  ><font color="#3030f1"
-                    ><b>https://comment-api.amrit-corp.com/</b></font
-                  ></a
-                >
-              </li>
-              <li>
-                FlashBite - Bite-sized Stories - (2026)
-                <a href="https://flashbite.mwfbiz.com/"
-                  ><font color="#3030f1"
-                    ><b>https://flashbite.mwfbiz.com/</b></font
-                  ></a
-                >
-              </li>
-              <li>
-                Miscellaneous Development - Saraswati, Kreeda - (2027 onwards)
+
+              <li class="project-item">
+                <div class="project-title">Miscellaneous Development</div>
+                <div class="project-meta">🧪 R&D · 2027 onwards</div>
+                <div class="project-desc">
+                  Experimental and ongoing development projects including
+                  Saraswati and Kreeda initiatives.
+                </div>
               </li>
             </ul>
           </div>

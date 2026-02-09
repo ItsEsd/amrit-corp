@@ -3840,6 +3840,7 @@ fieldset:disabled .btn {
   outline: 0;
 }
 .navbar-toggler-icon {
+  margin-top: -5px;
   display: flex;
   vertical-align: middle;
   background-repeat: no-repeat;
