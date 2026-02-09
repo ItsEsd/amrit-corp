@@ -13,7 +13,9 @@
 
   // Initiate the wowjs
   new WOW().init();
-
+  const navbarCollapse = new bootstrap.Collapse("#navbarCollapse", {
+    toggle: false,
+  });
   // Sticky Navbar
   $(window).scroll(function () {
     const isCollapsedOpen = $("#navbarCollapse").hasClass("show");
@@ -24,6 +26,10 @@
         top: "0px",
         background: "#fff",
       });
+      if (isCollapsedOpen) {
+        navbarCollapse.hide();
+        toggleBtn.setAttribute("aria-expanded", "false");
+      }
     } else {
       if (!isCollapsedOpen) {
         $(".sticky-top").removeClass("bg-white shadow-sm").css({
@@ -75,6 +81,75 @@
       stickyNav.classList.toggle("bg-white");
       stickyNav.classList.toggle("shadow-sm");
     });
+
+  /* -------------------------------------------------
+   7️⃣  JavaScript – open / close logic
+---------------------------------------------------- */
+  const btn = document.getElementById("float-btn");
+  const overlay = document.getElementById("chat-overlay");
+  const modal = document.getElementById("chat-modal");
+  const closeBtn = modal.querySelector(".chat-close-btn");
+
+  /* Open the overlay */
+  btn.addEventListener("click", () => {
+    overlay.classList.add("active");
+  });
+
+  /* Close via the X button */
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+
+  /* Optional: close with Escape key for better UX */
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("active")) {
+      overlay.classList.remove("active");
+    }
+  });
+
+  /* --------------------------------------------------------------
+     Helper – pull the integer that precedes “new message(s)”
+     -------------------------------------------------------------- */
+  function getMessageCountFromTitle(txt) {
+    const re = /(\d+)\s*new\s*messages?/i;
+    const m = txt.match(re);
+    return m ? parseInt(m[1], 10) : null;
+  }
+
+  const badge = document.getElementById("nummsg");
+  if (!badge) {
+    return;
+  }
+
+  function updateBadge(count) {
+    if (count > 0) {
+      badge.textContent = count;
+      badge.style.display = "flex";
+    } else {
+      badge.textContent = "";
+      badge.style.display = "none";
+    }
+  }
+
+  const titleEl = document.querySelector("title");
+  if (!titleEl) {
+    return;
+  }
+
+  const observer = new MutationObserver(() => {
+    const newTitle = document.title;
+    const cnt = getMessageCountFromTitle(newTitle);
+    updateBadge(cnt !== null ? cnt : 0);
+  });
+
+  observer.observe(titleEl, {
+    childList: true,
+    characterData: true,
+    subtree: true,
+  });
+
+  const initialCount = getMessageCountFromTitle(document.title);
+  updateBadge(initialCount !== null ? initialCount : 0);
 
   const loca = window.location.hostname;
   if (loca.endsWith("amrit-corp.com")) {

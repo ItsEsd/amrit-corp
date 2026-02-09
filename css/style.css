@@ -5,12 +5,16 @@ body {
 #spinner {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0s linear 0.5s;
   z-index: 99999;
 }
 
 #spinner.show {
-  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
 }
@@ -18,7 +22,7 @@ body {
 .back-to-top {
   position: fixed;
   display: none;
-  right: 35px;
+  left: 25px;
   bottom: 50px;
   z-index: 99;
 }
@@ -622,6 +626,109 @@ button:disabled {
 button:active {
   outline: none;
 }
+/* Chat Overlay */
+
+#float-btn {
+  position: fixed;
+  right: 0px;
+  bottom: 35px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bs-primary);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: inset -5px 4px 6px rgba(255, 255, 255, 0.525);
+  z-index: 1000; /* above everything else */
+  animation: float 2.5s ease-in-out infinite;
+}
+#float-btn:hover {
+  background: var(--bs-secondary);
+}
+
+/* Float up‑and‑down animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+/*--------------------------------------------------------------
+  3️⃣  Fullscreen overlay (initially hidden)
+--------------------------------------------------------------*/
+#chat-overlay {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left = 0 */
+  background: rgba(0, 0, 0, 0.315); /* dim background */
+  display: none; /* hidden until JS toggles it */
+  align-items: center; /* vertically centre modal content */
+  justify-content: center; /* horizontally centre modal content */
+  z-index: 9900000 !important;
+}
+
+/* When overlay is active – show it as a flex container */
+#chat-overlay.active {
+  display: flex;
+}
+
+/*--------------------------------------------------------------
+  4️⃣  Modal window (full‑screen content)
+--------------------------------------------------------------*/
+#chat-modal {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-radius: 8px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button (top‑right corner of the modal) */
+#chat-modal .chat-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #e0e0e0;
+  background-color: #0027cb;
+  width: 100%;
+  max-width: 350px;
+}
+.chat-close-btn svg {
+  animation: float2 3s ease-in-out infinite;
+}
+#nummsg {
+  top: -7px;
+  right: 2px;
+  position: absolute;
+  background-color: #e11f1f;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Float up‑and‑down animation */
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(-0%, 0);
+  }
+  50% {
+    transform: translate(-0%, -10px);
+  }
+}
+
 @media (max-width: 992px) {
   #ambtn {
     max-width: 35px;
