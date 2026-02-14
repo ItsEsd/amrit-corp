@@ -711,7 +711,7 @@ button:active {
   min-width: 350px;
   background-color: #0027cb;
   background-image: url("/corp-drive/imgsource/offline.png");
-  background-size: 80px;
+  background-size: 120px;
   background-repeat: no-repeat;
   background-position: center;
 }
