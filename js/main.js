@@ -159,7 +159,9 @@
   if (loca.endsWith("amrit-corp.com")) {
     document.body.style.display = "block";
   } else {
-    document.body.innerHTML = "";
+    document.body.innerHTML = window.atob(
+      "PGRpdiBzdHlsZT0nZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2hlaWdodDoxMDB2aDtiYWNrZ3JvdW5kOiNmZmY7ZmxleC1kaXJlY3Rpb246Y29sdW1uOyc+PGltZyBzcmM9J2h0dHBzOi8vYW1yaXQtY29ycC5jb20vY29ycC1kcml2ZS9pbWdzb3VyY2UvcGFnZS1ub3QtYXZhaWxhYmxlLnN2Zycgc3R5bGU9J3dpZHRoOjkwJTttYXgtd2lkdGg6NDAwcHg7Jz48cHJlPiYjMTY5OyBBTVJJVC1jb3JwLmNvbTwvcHJlPjwvZGl2Pg==",
+    );
   }
   setInterval(function () {
     console.clear();
