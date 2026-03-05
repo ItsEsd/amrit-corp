@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -89,7 +89,7 @@
             top: 10px;
             right: 20px;
             position: absolute;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: &quot;Courier New&quot;, Courier, monospace;
           "
         >
           <img src="/amritlogo.png" style="width: 30px" /> amrit-corp.com | W E
@@ -151,7 +151,13 @@
         <a href="/units/" class="undrdv">Operational units</a>
         <a href="/nav/investor" class="undrdv">Investor Relations</a>
         <a href="/nav/updates" class="undrdv">Updates</a>
-        <button class="tlsfun" onclick="closeNav();opencfrm('/t/tools/');">
+        <button
+          class="tlsfun"
+          onclick="
+            closeNav();
+            opencfrm('/t/tools/');
+          "
+        >
           Tools & Functionality
         </button>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -181,7 +187,7 @@
           div.innerHTML =
             '<div class="amconmn"><div class="amcon"><p class="amcontt">Mind Without Fear - MWF</p><span>-&nbsp;</span><a target="_blank" href="https://feed.mwfbiz.com/">Feed Gist</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://qubit.mwfbiz.com/">QuBit</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://imi.mwfbiz.com/">MONOLOGUE</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://admin.mwfbiz.com/">Admin</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://flashbite.mwfbiz.com/">FlashBite</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://c-resource.mwfbiz.com/bizbot/">BizBot</a><span>&nbsp;|&nbsp;</span><a href="https://c-resource.mwfbiz.com/">C-resource</a></div><hr>' +
             '<div class="amcon"><p class="amcontt">MASTROWALL || An Art of Learning</p><span>-&nbsp;</span><a target="_blank" href="https://home.mastrowall.in/">MASTROWALL In</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://e-enroll.mastrowall.com/">E-ENROLL</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://mastrowall.com/">SERVICES</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://astro.mastrowall.in/">FORUM</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://blog.mastrowall.in/">BLOG</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://library.mastrowall.in/">LIBRARY</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://telemedia.mastrowall.com/">TELEMEDIA</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://exam-portal.mastrowall.com/">EXAM PORTAL</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://sketch.mastrowall.com/">SKETCHPAD</a><span>&nbsp;|&nbsp;</span><a href="https://quiz.mastrowall.com/">QUIZ</a><span>&nbsp;|&nbsp;</span><a target="_blank" href="https://e-reset.mastrowall.com/">E-RESET</a><span>&nbsp;|&nbsp;</span><a href="https://admin.mastrowall.com/">Admin</a><span>&nbsp;|&nbsp;</span><a href="https://gistbox.mastrowall.com/" target="_blank">GistBox</a></div><hr><a href="https://comment-api.amrit-corp.com/" target="_blank">Comment API 💭 </a><span>&nbsp;|&nbsp;</span><a href="https://DealToDealers.com/" target="_blank">🏬 DealToDealers.com</a><hr>' +
-            '<p class="amcontt" style="font-weight:500;font-size:13px;"><a onclick=\'opencfrm("https://image-search.amrit-corp.com/");\'>Image search 🔍</a> | <a onclick=\'opencfrm("eliza");\'>Eliza (1966)</a><span>&nbsp;|&nbsp;<a onclick=\'opencfrm("https://g2faq.amrit-corp.com");\'>🤖 G2 FAQ</a><span>&nbsp;|&nbsp;</span><a onclick=\'opencfrm("https://scrapia.amrit-corp.com/");\' >Scrapia</a>&nbsp;|&nbsp;</span><a onclick=\'opencfrm("https://rss-feed.amrit-corp.com/");\' >News RSS <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Generic_Feed-icon.svg/384px-Generic_Feed-icon.svg.png" style="width:12px;margin-top:-3px;"></a></p><hr>' +
+            '<p class="amcontt" style="font-weight:500;font-size:13px;"><a onclick=\'opencfrm("https://image-search.amrit-corp.com/");\'>Image search 🔍</a> | <a onclick=\'opencfrm("eliza");\'>Eliza (1966)</a><span>&nbsp;|&nbsp;<a onclick=\'opencfrm("https://g2faq.amrit-corp.com");\'>🤖 G2 FAQ</a><span>&nbsp;|&nbsp;</span><a onclick=\'opencfrm("https://scrapia.amrit-corp.com/");\' >Scrapia</a>&nbsp;|&nbsp;</span><a onclick=\'opencfrm("https://rss-feed.amrit-corp.com/");\' >News RSS <img src="https://amrit-corp.com/img/feed-icon.svg.png" style="width:12px;margin-top:-3px;"></a></p><hr>' +
             '<button id="closeButton">THANK YOU</button></div>';
           document.body.appendChild(div);
           div.style.display = "block";
