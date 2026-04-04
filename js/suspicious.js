@@ -8,6 +8,8 @@ const suspiciousSources = [
   "t.co",
   "x.com",
   "reddit.com",
+  "truthsocial.com",
+  "tiktok.com",
 ];
 
 let isSuspicious = false;
@@ -66,7 +68,7 @@ if (isSuspicious) {
       Copy Clean Link
     </button>
 
-    <div style='font-size:11px;display:flex;align-items:center;justify-content:center; margin-top:10px; gap:4px;'>
+    <div style='font-size:11px;display:flex;align-items:center;justify-content:center; margin-top:10px; gap:4px;color:#313131;'>
       <a style="color:#313131" href="https://amrit-corp.com/privacy-policy">Privacy Policy</a> · 
       <a style="color:#313131" href="https://amrit-corp.com/terms-of-service">Terms of Service</a> · 
       <a style="color:#313131" href="https://amrit-corp.com">© AMRIT-Corp.com</a>
