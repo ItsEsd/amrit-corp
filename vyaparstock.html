@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+      VyaparStock - AMRIT. A Smart Inventory & Invoicing by AMRIT-Corp
+    </title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://amrit-corp.com/favicon.ico"
+    />
+    <meta
+      name="title"
+      content="VyaparStock - Smart Inventory & Invoicing by AMRIT-Corp"
+    />
+    <meta
+      name="description"
+      content="Professional inventory management, GST-ready invoicing, and sales analytics for Indian businesses. "
+    />
+    <meta
+      name="keywords"
+      content="inventory software, invoicing app, sales analytics, AMRIT-Corp, VyaparStock, business software India, GST billing software"
+    />
+    <meta name="author" content="AMRIT-Corp" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="msvalidate.01" content="4048F18C0BB2A568781C5EC1D1FD7F0B" />
+    <meta name="robots" content="index, follow" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+      }
+      .hero-bg {
+        background-color: #0f172a;
+        background-image: radial-gradient(
+          at 0% 0%,
+          hsla(215, 28%, 17%, 1) 0,
+          transparent 50%
+        );
+      }
+
+      /* Carousel Styles */
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+      }
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-out;
+        cursor: grab;
+      }
+      .carousel-track:active {
+        cursor: grabbing;
+      }
+      .slide {
+        min-width: 100%;
+        position: relative;
+      }
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(15, 23, 42, 0.7);
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition: all 0.2s;
+      }
+      .carousel-btn:hover {
+        background: rgba(234, 88, 12, 1);
+      }
+      .prev {
+        left: 1rem;
+      }
+      .next {
+        right: 1rem;
+      }
+      .dot {
+        height: 8px;
+        width: 8px;
+        background-color: #cbd5e1;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.3s;
+        margin: 0 4px;
+        cursor: pointer;
+      }
+      .dot.active {
+        width: 24px;
+        border-radius: 4px;
+        background-color: #ea580c;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="w-full max-w-[160px] h-8 rounded flex items-center justify-center"
+          >
+            <img src="corp-drive/imgsource/vstock-logo.png" />
+          </div>
+        </div>
+        <div
+          class="hidden md:flex gap-8 text-sm font-semibold text-slate-600 items-center"
+        >
+          <a href="../"
+            ><img
+              src="/corp-drive/imgsource/titlelogo.png"
+              style="
+                width: 90px;
+                border-top: 1px solid #042a81;
+                border-bottom: 1px solid #042a81;
+                padding-top: 2px;
+                padding-bottom: 2px;
+              "
+          /></a>
+          <a href="#features" class="hover:text-orange-600 transition"
+            >Features</a
+          >
+          <a href="#demo" class="hover:text-orange-600 transition"
+            >Download Demo</a
+          >
+          <a href="#pricing" class="hover:text-orange-600 transition"
+            >Pricing</a
+          >
+        </div>
+        <a
+          href="#pricing"
+          class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-800 transition shadow-md"
+          >Get Full Version</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6 hero-bg">
+      <div class="max-w-7xl mx-auto text-center">
+        <span
+          class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-400 uppercase border border-orange-400/30 rounded-full"
+          >New Generation Business Tool</span
+        >
+        <h1
+          class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight"
+        >
+          Master Your Business with
+          <span class="text-orange-500">VyaparStock</span>
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+          Advanced inventory, professional invoicing, and real-time sales
+          analytics in one powerful Windows application. Local network remote
+          access included.
+        </p>
+
+        <div id="demo" class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="/downloads"
+            class="bg-white text-slate-900 px-8 py-4 rounded-xl font-extrabold text-lg hover:bg-slate-100 flex items-center justify-center transition shadow-2xl"
+          >
+            <svg
+              class="w-6 h-6 mr-2 text-orange-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              ></path>
+            </svg>
+            Download Windows Demo (.zip)
+          </a>
+          <p class="text-slate-500 text-sm md:hidden mt-2 italic">
+            * Requires Windows 10/11
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- UI Carousel Section -->
+    <section id="preview" class="py-20 px-6 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Software Interface Preview</h2>
+          <p class="text-slate-500">
+            Explore the clean and intuitive dashboard of VyaparStock.
+          </p>
+        </div>
+
+        <div
+          class="carousel-container shadow-2xl border border-slate-200"
+          id="carousel"
+        >
+          <button class="carousel-btn prev" id="prevBtn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+          <button class="carousel-btn next" id="nextBtn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+
+          <div class="carousel-track" id="track">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-1.png"
+                alt="Dashboard"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">Main Dashboard</h4>
+                <p class="text-sm opacity-80">
+                  Real-time overview of your business health.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-7.png"
+                alt="Inventory"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">Inventory Management</h4>
+                <p class="text-sm opacity-80">
+                  Easily track stock levels and reorder points.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-4.png"
+                alt="Invoicing"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">Professional Invoicing</h4>
+                <p class="text-sm opacity-80">
+                  Generate GST-ready bills in seconds.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-2.png"
+                alt="Analytics"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">Sales Analytics</h4>
+                <p class="text-sm opacity-80">
+                  In-depth charts and trends for your revenue.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-5.png"
+                alt="Remote Access"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">
+                  File Export and Import Functionality
+                </h4>
+                <p class="text-sm opacity-80">
+                  Access through Wi-Fi on any device in the shop.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide">
+              <img
+                src="/corp-drive/imgsource/vstock/vstock-img-6.png"
+                alt="Integrated Tools"
+                class="w-full h-auto aspect-video object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white"
+              >
+                <h4 class="font-bold text-xl">Life-time License</h4>
+                <p class="text-sm opacity-80">Vyapar All Ease.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-6" id="dots"></div>
+      </div>
+    </section>
+    <!-- Specs / Features -->
+    <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Feature 1 -->
+        <div
+          class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
+        >
+          <div
+            class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Sales Analytics</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Visualize your growth. Automated analytics based on every invoice
+            generated to help you make data-driven decisions.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
+        >
+          <div
+            class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.111 16.404a5.5 5.5 0 117.778 0M12 20h.01m-7.08-7.071a9.05 9.05 0 0112.728 0m-1.214-4.814a11.522 11.522 0 0115.151 0"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Local Network Access</h3>
+          <p class="text-slate-600 leading-relaxed">
+            No internet? No problem. Access your dashboard remotely within the
+            same Wi-Fi network for stock checks and oversight.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
+        >
+          <div
+            class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Integrated Tools</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Stop switching tabs. Features integrated Google Search support, a
+            professional calculator, and business calendar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section
+      id="pricing"
+      class="py-24 px-6 bg-slate-900 overflow-hidden relative"
+    >
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <h2 class="text-3xl font-bold text-white mb-12">
+          One Price. Lifetime Freedom.
+        </h2>
+        <div class="bg-white rounded-[2.5rem] p-12 shadow-2xl relative">
+          <div
+            class="absolute -top-5 left-1/2 -translate-x-1/2 bg-orange-600 text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+          >
+            Limited Version Offer
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="text-7xl font-black text-slate-900 mb-4 tracking-tighter"
+            >
+              <span class="text-3xl font-medium align-top mt-2 inline-block"
+                >₹</span
+              >16,999<span class="text-xl text-slate-400 font-normal">**</span>
+            </div>
+            <p
+              class="text-slate-500 font-medium mb-10 uppercase tracking-widest text-sm italic"
+            >
+              Life-time License
+            </p>
+
+            <ul
+              class="w-full grid sm:grid-cols-2 gap-4 text-left text-slate-700 mb-12"
+            >
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  ></path>
+                </svg>
+                Full Version EXE
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  ></path>
+                </svg>
+                1-on-1 Install Support
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  ></path>
+                </svg>
+                Priority Assistance
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-500"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  ></path>
+                </svg>
+                Offline Database
+              </li>
+            </ul>
+
+            <div class="w-full flex flex-col gap-4">
+              <a
+                href="mailto:contact@amrit-corp.com"
+                class="w-full bg-orange-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-orange-700 transition shadow-lg shadow-orange-200 uppercase tracking-tight"
+                >Contact for Full License</a
+              >
+              <p class="text-xs text-slate-400">
+                * For installation support or full version assistance, drop a
+                mail or call us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 bg-slate-50 border-t border-slate-200">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="text-center md:text-left">
+          <p
+            class="text-slate-400 text-sm mb-2 font-bold uppercase tracking-widest"
+          >
+            An <span class="text-orange-600">AMRIT-Corp.com</span> PRODUCT
+          </p>
+          <p class="text-slate-500 text-sm">
+            Advance Media Representational Information Technologies - AMRIT
+          </p>
+        </div>
+        <div class="text-center md:text-right">
+          <div class="flex gap-6 mb-4 justify-center md:justify-end">
+            <a
+              href="/privacy-policy"
+              class="text-slate-400 hover:text-slate-600 text-sm"
+              >Privacy Policy</a
+            >
+            <a
+              href="/terms-of-service"
+              class="text-slate-400 hover:text-slate-600 text-sm"
+              >Terms of Service</a
+            >
+          </div>
+          <p class="text-slate-400 text-xs uppercase tracking-tighter">
+            © 2026 A M R I T. Built for local efficiency.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const track = document.getElementById("track");
+      const slides = Array.from(track.children);
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+      const dotsContainer = document.getElementById("dots");
+
+      let currentIndex = 0;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let isDragging = false;
+
+      // Create dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsContainer.children);
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+      });
+
+      // Touch & Mouse Drag Logic
+      track.addEventListener("touchstart", touchStart);
+      track.addEventListener("touchend", touchEnd);
+      track.addEventListener("touchmove", touchMove);
+      track.addEventListener("mousedown", touchStart);
+      track.addEventListener("mouseup", touchEnd);
+      track.addEventListener("mousemove", touchMove);
+      track.addEventListener("mouseleave", touchEnd);
+
+      function touchStart(e) {
+        startX = getPositionX(e);
+        isDragging = true;
+        track.style.transition = "none";
+      }
+
+      function touchMove(e) {
+        if (isDragging) {
+          const currentX = getPositionX(e);
+          const diff = currentX - startX;
+          const move = -currentIndex * track.offsetWidth + diff;
+          track.style.transform = `translateX(${move}px)`;
+        }
+      }
+
+      function touchEnd() {
+        isDragging = false;
+        const movedBy =
+          currentIndex * -track.offsetWidth -
+          (parseFloat(
+            track.style.transform.replace("translateX(", "").replace("px)", ""),
+          ) || 0);
+
+        track.style.transition = "transform 0.5s ease-out";
+        if (movedBy > 100 && currentIndex < slides.length - 1)
+          currentIndex += 1;
+        if (movedBy < -100 && currentIndex > 0) currentIndex -= 1;
+
+        updateSlider();
+      }
+
+      function getPositionX(e) {
+        return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+      }
+
+      // Auto play (optional)
+      setInterval(() => {
+        if (!isDragging) {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateSlider();
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>

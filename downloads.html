@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Downloads | AMRIT - Advance Media Representational Information
+      Technologies
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="/favicon.ico" rel="icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div class="container-fluid sticky-top">
+      <div class="container">
+        <nav
+          class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white"
+        >
+          <span href="/" class="navbar-brand">
+            <h2 style="display: flex; align-items: center">
+              <img src="amritlogo.png" alt="AMRIT" id="ambtn" />
+              AMRIT Corp.
+            </h2>
+          </span>
+          <button
+            type="button"
+            class="navbar-toggler ms-auto me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#464646"
+              >
+                <path
+                  d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"
+                /></svg
+            ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="/" class="nav-item nav-link">Home</a>
+
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                  >Enterprise</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="/nav/briefing" class="dropdown-item"
+                    >Corp. Briefing</a
+                  >
+                  <a href="/nav/investor" class="dropdown-item"
+                    >Investor Relations</a
+                  >
+                  <a href="/units/" class="dropdown-item">Operational Units</a>
+                  <a
+                    class="dropdown-item"
+                    onclick="opencfrm('/t/tools/')"
+                    style="cursor: pointer"
+                  >
+                    Tools & Functionality</a
+                  >
+                  <a href="/contact" class="dropdown-item">Contact Us</a>
+                </div>
+              </div>
+
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  data-bs-toggle="dropdown"
+                  >Services</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="https://DealToDealers.com" class="dropdown-item"
+                    >DealToDealers.com</a
+                  >
+                  <a href="https://mastrowall.com" class="dropdown-item"
+                    >MASTROWALL - EdTech</a
+                  >
+                  <a href="https://mwfbiz.com" class="dropdown-item"
+                    >Mind Without Fear - MWF</a
+                  ><a
+                    href="https://comment-api.amrit-corp.com"
+                    class="dropdown-item"
+                    >Comment API</a
+                  ><a href="/downloads" class="dropdown-item"
+                    >Downloads
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#48752C"
+                    >
+                      <path
+                        d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                      /></svg
+                  ></a>
+                </div>
+              </div>
+
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                  >Projects</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="https://scrapia.amrit-corp.com" class="dropdown-item"
+                    >Scrapia</a
+                  >
+                  <a
+                    href="https://rss-feed.amrit-corp.com"
+                    class="dropdown-item"
+                    >News RSS <i class="fa fa-rss"></i></a
+                  ><a
+                    href="https://webchat.amrit-corp.com"
+                    class="dropdown-item"
+                    >WebChat</a
+                  >
+                  <a
+                    href="https://image-search.amrit-corp.com"
+                    class="dropdown-item"
+                    >Image Search 🔍</a
+                  >
+                  <a href="https://g2faq.amrit-corp.com" class="dropdown-item"
+                    >🤖 G2 FAQ</a
+                  ><a
+                    href="https://vanicast.amrit-corp.com"
+                    class="dropdown-item"
+                    >VaniCast 🎙️</a
+                  ><a
+                    href="/vyaparstock"
+                    class="dropdown-item"
+                    style="background: rgba(255, 255, 255, 0.612)"
+                    ><img
+                      src="corp-drive/imgsource/vstock-logo.png"
+                      style="width: 120px; margin-right: 6px"
+                  /></a>
+                </div>
+              </div>
+
+              <a href="/nav/updates" class="nav-item nav-link"
+                >Updates <i class="fa fa-info-circle"></i
+              ></a>
+              <a
+                href="https://enterprise.amrit-corp.com/"
+                class="nav-item nav-link"
+                >ERP Login <i class="fa fa-map-signs"></i
+              ></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid pb-5 bg-primary hero-header">
+      <div class="container py-5">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-1 mb-0 animated slideInLeft">Downloads</h1>
+          </div>
+          <div class="col-lg-6 animated slideInRight">
+            <nav aria-label="breadcrumb">
+              <ol
+                class="breadcrumb justify-content-center justify-content-lg-end mb-0"
+              >
+                <li class="breadcrumb-item">
+                  <a class="text-primary" href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="text-primary" href="/">Services</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-secondary active"
+                  aria-current="page"
+                >
+                  Downloads
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero End -->
+
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+          <div class="row justify-content-center mt-4">
+            <div class="col-lg-10">
+              <div class="wow fadeIn" data-wow-delay="0.4s">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    text-align: center;
+                  "
+                >
+                  <h5>Download Applications</h5>
+
+                  <!-- MASTROWALL APK -->
+                  <div>
+                    <strong style="font-size: 24px"
+                      >MASTROWALL (Android APK)</strong
+                    ><br />
+                    <a
+                      href="/executables/MASTROWALL-apkversion_monolith-1.1.apk"
+                      download
+                    >
+                      📥 Download Android APK (.apk)
+                    </a>
+                  </div>
+
+                  <!-- VyaparStock EXE -->
+                  <div style="margin-top: 20px">
+                    <strong style="font-size: 24px"
+                      >VyaparStock (Windows Demo)</strong
+                    ><br />
+                    <a href="/executables/VyaparStock_AMRIT_Setup.zip" download>
+                      💻 Download Windows EXE (.zip)
+                    </a>
+                    <p style="margin-top: 5px; font-size: 16px; color: #666">
+                      * For full version EXE, installation support, or
+                      assistance, drop a mail or call us. (₹16,999** Life-time
+                      License)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="wow fadeIn" data-wow-delay="0.3s">
+              <div class="row g-3">
+                <div
+                  class="col-md-12"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    flex-direction: column;
+                  "
+                >
+                  <h5>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      viewBox="0 -960 960 960"
+                      width="30px"
+                      fill="#464646"
+                    >
+                      <path
+                        d="m720-160-56-56 63-64H560v-80h167l-63-64 56-56 160 160-160 160ZM160-280q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h520q33 0 56.5 23.5T760-760v204q-10-2-20-3t-20-1q-10 0-20 .5t-20 2.5v-147L416-520 160-703v343h323q-2 10-2.5 20t-.5 20q0 10 1 20t3 20H160Zm58-480 198 142 204-142H218Zm-58 400v-400 400Z"
+                      />
+                    </svg>
+                    <a href="mailto:contact@amrit-corp.com"
+                      >contact@amrit-corp.com</a
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      viewBox="0 -960 960 960"
+                      width="30px"
+                      fill="#464646"
+                    >
+                      <path
+                        d="M480-40v-80h280v-40H600v-320h160v-40q0-116-82-198t-198-82q-116 0-198 82t-82 198v40h160v320H200q-33 0-56.5-23.5T120-240v-280q0-74 28.5-139.5T226-774q49-49 114.5-77.5T480-880q74 0 139.5 28.5T734-774q49 49 77.5 114.5T840-520v400q0 33-23.5 56.5T760-40H480ZM200-240h80v-160h-80v160Zm480 0h80v-160h-80v160ZM200-400h80-80Zm480 0h80-80Z"
+                      /></svg
+                    ><a href="tel:919593226819">+91 959 322 6819</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="float-btn" aria-label="Open fullscreen panel">
+      <span id="nummsg"></span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="48px"
+        viewBox="0 -960 960 960"
+        width="48px"
+        fill="#ffffff"
+      >
+        <path
+          d="M440-120v-60h340v-304q0-123.69-87.32-209.84Q605.36-780 480-780q-125.36 0-212.68 86.16Q180-607.69 180-484v244h-20q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v69q0 24.75-17.62 42.37Q804.75-120 780-120H440ZM338.5-418.68q-8.5-8.67-8.5-21.5 0-12.82 8.68-21.32 8.67-8.5 21.5-8.5 12.82 0 21.32 8.68 8.5 8.67 8.5 21.5 0 12.82-8.68 21.32-8.67 8.5-21.5 8.5-12.82 0-21.32-8.68Zm240 0q-8.5-8.67-8.5-21.5 0-12.82 8.68-21.32 8.67-8.5 21.5-8.5 12.82 0 21.32 8.68 8.5 8.67 8.5 21.5 0 12.82-8.68 21.32-8.67 8.5-21.5 8.5-12.82 0-21.32-8.68ZM241-462q-7-106 64-182t177-76q87 0 151 57.5T711-519q-89-1-162.5-50T434.72-698Q419-618 367.5-555.5T241-462Z"
+        />
+      </svg>
+    </button>
+    <div id="chat-overlay">
+      <div
+        id="chat-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <div id="tawk_6989a694585bab1c339ee7f0"></div>
+        <button class="chat-close-btn" aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 -960 960 960"
+            width="48px"
+            fill="#ffffff"
+          >
+            <path d="M480-360 280-559h400L480-360Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      Tawk_API.embedded = "tawk_6989a694585bab1c339ee7f0";
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/6989a694585bab1c339ee7f0/1jh0rt2v9";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="d-inline-block mb-3">
+              <h1 class="text-white" style="display: flex; align-items: center">
+                <img
+                  src="favicon.png"
+                  alt="AMRIT"
+                  style="
+                    width: 50%;
+                    max-width: 50px;
+                    background: #0011ff27;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                  "
+                />A M R I T
+              </h1>
+            </a>
+            <p class="mb-0">Redefining Digital Engagement</p>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+            <h5 class="text-white mb-4">Get In Touch</h5>
+            <p>
+              <i class="fa fa-map-marker-alt me-3"></i>874/B/8, Arambagh, WB, IN
+            </p>
+            <p><i class="fa fa-phone-alt me-3"></i>+91 9593 226 819</p>
+            <p><i class="fa fa-envelope me-3"></i>contact@amrit-corp.com</p>
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-outline-primary btn-square border-2 me-2"
+                href="https://www.facebook.com/CORP.AMRIT/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary btn-square border-2 me-2"
+                href="https://instagram.com/amritcorp"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary btn-square border-2 me-2"
+                href="https://www.linkedin.com/company/amrit-corp/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+            <h5 class="text-white mb-4">Good Reference</h5>
+            <a class="btn btn-link" href="/nav/updates">Updates</a>
+            <a class="btn btn-link" href="/nav/investor">Investor Relations</a>
+            <a class="btn btn-link" href="/nav/briefing">Corp. Briefing</a>
+            <a class="btn btn-link" href="/privacy-policy">Privacy Policy</a>
+            <a class="btn btn-link" href="/terms-of-service"
+              >Terms of Service</a
+            >
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+            <h5 class="text-white mb-4">Our Services</h5>
+            <a class="btn btn-link" href="https://dealtodealers.com"
+              >DealToDealers.com <i class="fas fa-external-link-square-alt"></i
+            ></a>
+            <a class="btn btn-link" href="https://mastrowall.com"
+              >MASTROWALL - EdTech
+              <i class="fas fa-external-link-square-alt"></i
+            ></a>
+            <a class="btn btn-link" href="https://mwfbiz.com"
+              >Mind Without Fear - MWF
+              <i class="fas fa-external-link-square-alt"></i></a
+            ><a
+              class="btn btn-link"
+              href="https://comment-api.amrit-corp.com"
+              target="_blank"
+              >Comment API <i class="fas fa-external-link-square-alt"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy;
+              <a class="border-bottom" href="https://amrit-corp.com"
+                >AMRIT-Corp.com</a
+              >. All Right Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="/">Home</a>
+                <a href="/sitemap.xml">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/icon-script.js"></script>
+  </body>
+</html>
