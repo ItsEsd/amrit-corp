@@ -2,6 +2,35 @@
 body {
   /* display: none; */
 }
+/* Grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(157, 157, 157, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 111, 111, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+.container-fluid {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.096),
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 255, 255, 0.089),
+      transparent 35%
+    );
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
 #spinner {
   opacity: 0;
   visibility: hidden;
