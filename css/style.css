@@ -15,7 +15,7 @@ body::before {
   pointer-events: none;
 }
 .container-fluid {
-  background:
+  /* background:
     radial-gradient(
       circle at top left,
       rgba(255, 255, 255, 0.096),
@@ -25,7 +25,7 @@ body::before {
       circle at bottom right,
       rgba(255, 255, 255, 0.089),
       transparent 35%
-    );
+    ); */
 }
 body > * {
   position: relative;
@@ -162,7 +162,7 @@ button:disabled {
 .hero-header {
   margin-top: -100px;
   padding-top: 100px;
-  background: url(../img/hero-cover.webp) top center no-repeat;
+  background: url(../img/cover.webp) top center no-repeat;
   background-size: cover;
 }
 
@@ -493,7 +493,11 @@ button:disabled {
   padding-right: 0;
   border-right: none;
 }
-
+.footer {
+  color: var(--bs-light);
+  background: url(../img/section.webp) top center no-repeat;
+  background-size: cover;
+}
 /* From Previous */
 /* Menu Script CSS */
 
