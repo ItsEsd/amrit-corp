@@ -19,7 +19,7 @@ if (suspiciousSources.some((source) => referreramrt.includes(source))) {
 }
 
 if (urlParamsamrt.has("fbclid") || urlParamsamrt.has("igshid")) {
-  isSuspicious = true;
+  isSuspicious = false;
 }
 
 if (isSuspicious) {
